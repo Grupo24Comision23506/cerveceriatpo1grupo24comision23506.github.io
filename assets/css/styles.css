@@ -6,12 +6,10 @@ body, h1, h2, h3, p, ul, li, form {
 
 /* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
-    background-image: linear-gradient(to bottom, #000000, #111016dc ), url("../media/image/Background\ image-Desktop.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: white;
+    color: #333;
+    font-size: 1.2rem;
+    line-height: 1.6em;
+    margin: 0;
 }
 
 header {
@@ -20,6 +18,72 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+p {
+    margin-bottom: 1.6em;
+}
+
+.container {
+    width: 85%;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.home{
+    height: 100vh;
+    /* 02 */
+    background-image: linear-gradient(to top, rgba(251, 250, 194, 0.104) 0%, hsla(218, 68%, 79%, 0.326) 100%), url(../media/image/fondo.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.header {
+    background: #333;
+    color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+
+}
+
+.header a {
+    color: white;
+    text-decoration: none;
+}
+
+.logo-nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    letter-spacing: 5px;
+    font-size: 1.4em;
+}
+
+.navigation ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navigation ul li {
+    display: inline-block;
+}
+
+.navigation ul li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: all 0.4s linear;
+    border-radius: 5px;
+}
+
+.navigation ul li a:hover {
+    background: #4a4a4a
 }
 
 nav ul {
@@ -86,4 +150,149 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
+}
+
+/* Estilos para el section */
+#block-abipacowidget {
+    margin: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilos para el widget */
+  .widget {
+    position: relative;
+  }
+  
+  /* Estilos para el botón de cierre */
+  .widget_close--btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #aeadad;
+    border-radius: 50%;
+  }
+  
+  /* Estilos para el encabezado del widget */
+  .widget_head {
+    background-color: #000000;
+    height: 50px;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  /* Estilos para la imagen del encabezado */
+  .widget_head img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  /* Estilos para el contenido del widget */
+  .widget_body {
+    margin: 20px;
+    text-align: center;
+  }
+  
+  /* Estilos para el texto del widget */
+  .body--text {
+    color: #ffffff;
+    font-size: 18px;
+  }
+  
+  /* Estilos para el botón de compra */
+  .body_btn--a {
+    display: inline-block;
+    width: 100px;
+    height: 35px;
+    background: #ffcc00;
+    color: #000000;
+    font-size: 16px;
+    border-radius: 14px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 35px;
+    text-decoration: none;
+    margin-top: 10px;
+  }
+  
+  /* Estilos para la imagen del pie del widget */
+  .widget_footer img {
+    max-width: 100%;
+    max-height: auto;
+  }
+  
+  #block-abipacowidget {
+    display: none; /* Inicialmente, oculta el widget */
+  }
+  
+  #menu-button {
+    position: fixed;
+    bottom: 20px; /* Ajusta la distancia desde la parte inferior */
+    right: 20px; /* Ajusta la distancia desde la derecha */
+    cursor: pointer;
+    z-index: 9999; /* Asegura que el botón esté en la parte superior */
+}
+
+/* Agrega estilos visuales al botón de menú si lo deseas */
+#menu-button img {
+    width: 30px;
+    height: 30px;
+}
+  
+  .hamburguer{
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+    margin: auto;
+    padding: 60px 0;
+}
+
+.contenedor-cerveza {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.head{
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.titulo{
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.copy{
+    font-weight: 300;
+    font-size: 25px;
+}
+
+.subtitulo{
+    color: #9f8ad0;
+    font-size: 40px;
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 30px;
 }
