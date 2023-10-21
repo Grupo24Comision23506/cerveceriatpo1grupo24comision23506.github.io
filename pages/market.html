@@ -1,30 +1,87 @@
 <!DOCTYPE html>
-<html lang="es-AR">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/css/market-style.css">
-    <title>Carrito de Compras de Cervezas</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/market.css"
+    <!-- Links del CSS y fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <title>TP grupo 24 - Market</title>
 </head>
+
 <body>
-  <main>
+    <div id="overlay">
+        <div id="popup">
+          <h2 style="margin: 10px">Confirma tu edad</h2>
+          <p style="margin: 10px">¿Confirmás tener más de 18 años para poder entrar a este sitio?</p>
+          <button id="confirmar" type="button">Sí, soy mayor de edad</button>
+        </div>
+      </div>
+    <!-- Header de la página -->
+    <header class="header">
+        <!-- <nav class="menu-navegacion">
+            <a href="#inicio">Inicio</a>
+            <a href="#cervezas">Cervezas</a>
+            <a href="./pages/Formulario.html">Contacto</a>
+            <a href="./pages/market.html">Market</a>
+            <a href="#Historia">Historia</a>
+        </nav> -->
+        <div class="container logo-nav-container">
+          <a href="#" class="logo">Logo</a>
+          <nav class="navigation">
+            <ul>
+              <li><a href="/index.html">Inicio</a></li>
+              <li><a href="/index.html">Cervezas</a></li>
+              <li><a href="/pages/Formulario.html">Contacto</a></li>
+              <li><a href="/pages/market.html">Market</a></li>
+              <li><a href="/index.html">Historia</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+    <!-- Body de la página -->
+    <div class="contenedor">
+        <div class="filtro">
+          <form id="form">
+            <label for="busqueda">Buscar por nombre:</label>
+            <input type="text" id="busqueda" name="busqueda">
+            <label for="precioMin">Precio mínimo:</label>
+            <input type="number" id="precioMin" name="precioMin">
+            <label for="precioMax">Precio máximo:</label>
+            <input type="number" id="precioMax" name="precioMax">
+            <button type="submit">Filtrar</button>
+          </form>
+        </div>
+        <div class="productos"  id="contenedorProducto"></div>
+        <div class="paginacion" id="paginacion"></div>
+      </div>    <!-- Footer de la página -->
+    <footer id="contacto">
+        <div class="contenedor footer-content">
+            <div class="contact-us">
+                <h2 class="brand">Cervisia</h2>
+                <p>La mejor cerveceria en la actualidad</p>
+            </div>
+            <div class="social-media">
+                <a href="./" class="social-media-icon">
+                    <i class='bx bxl-facebook'></i>
+                </a>
+                <a href="./" class="social-media-icon">
+                    <i class='bx bxl-twitter'></i>
+                </a>
+                <a href="./" class="social-media-icon">
+                    <i class='bx bxl-instagram'></i>
+                </a>
+            </div>
+        </div>
+        <div class="line"></div>
+    </footer>
 
-    <h1>Cervezas</h1>
-    <div id="beers"></div>
-    
-    <h2>Carrito de Compras</h2>
-    <ul id="cart"></ul>
- 
-    <p>Total: $<span id="total">0.00</span></p>
-    
-    <header></header>
-
-    <div id="app">
-    </div>
-
-  </main>
-  <script src="../assets/js/market.js" type="module"></script>
-  <script src="../assets/js/Market-api2.js" type="module"></script>
+    <!-- Scripts para los datos -->
+    <script src="../assets/js/index.js" type="module"></script>
+    <script src="../assets/js/market.js"></script>
+    <script src="../assets/js/lightbox.js"></script>
+    <script src="../assets/js/menu.js"></script>
 </body>
-<footer></footer>
-</html>
