@@ -1,10 +1,11 @@
+/* Reset de estilos */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
+/* Estilos generales */
 body {
     font-family: 'Open Sans', sans-serif;
 }
@@ -274,7 +275,7 @@ footer {
 .home {
     height: 100vh;
     /* 02 */
-    background-image: linear-gradient(to top, rgba(251, 250, 194, 0.104) 0%, hsla(218, 68%, 79%, 0.326) 100%), url(../media/image/fondo.jpg);
+    background-image: linear-gradient(to top, rgba(251, 250, 194, 0.104) 0%, hsla(218, 68%, 79%, 0.326) 100%), url(../media/images/fondo.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
