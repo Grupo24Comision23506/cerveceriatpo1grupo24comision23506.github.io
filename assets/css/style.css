@@ -69,8 +69,6 @@ header {
     box-shadow: 0 0 6px rgba(0, 0, 0, .5);
 }
 
-
-
 .menu-navegacion {
     position: fixed;
     top: 0;
@@ -231,7 +229,6 @@ main {
     cursor: pointer;
 }
 
-
 footer {
     background: rgb(180, 135, .5);
     padding-bottom: 0.1px;
@@ -292,7 +289,17 @@ footer {
     font-size: 1.4em;
 }
 
+/*.video {
+    position: relative;
+    width: 100vh;
+    height: 50vh;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+}  */
+
 .navigation ul {
+    z-index: 999;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -300,6 +307,7 @@ footer {
 
 .navigation ul li {
     display: inline-block;
+    z-index: 999;
 }
 
 .navigation ul li a {
@@ -307,9 +315,11 @@ footer {
     padding: 0.5rem 1rem;
     transition: all 0.4s linear;
     border-radius: 5px;
+    z-index: 999;
 }
 
 .navigation ul li a:hover {
+    z-index: 999;
     background: #4a4a4a
 }
 
