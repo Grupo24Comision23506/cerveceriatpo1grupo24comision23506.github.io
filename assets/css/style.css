@@ -235,9 +235,6 @@ main {
 footer {
     background: rgb(180, 135, .5);
     padding-bottom: 0.1px;
-    align-items: center;
-    justify-content: space-between;
-
 }
 
 .footer-content {

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es-AR">
-
 <head>
   <!-- CHARSET -->
   <meta charset="UTF-8">
@@ -26,30 +25,23 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="./assets/media/icons/s-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
-
   <!-- DESCRIPTION -->
   <meta name="description" content=" TPO-FrontEnd Codo a Codo FullStack Python">
-
   <!-- AUTHOR -->
   <meta name="author" content=" Grp24 - Federico Ponce - Tear Axel - José Moisés - Chol Gastón ">
-
-
   <!-- TITTLE -->
   <title>Cervecería Cervisia</title>
-
   <!-- STYLES -->
-
   <!-- Estilo Genera para toda la Pagina -->
   <link rel="stylesheet" href="./assets/css/style.css">
-
   <!-- Estilo para widget -->
   <link rel="stylesheet" href="./assets/css/Estilo-widget.css">
-
   <!-- Estilo para Cartel Cookies -->
   <link rel="stylesheet" href="./assets/css/Cartel-cookies.css">
-
+  <!-- Links del CSS y fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 </head>
-
 <body>
   <div id="overlay">
     <div id="popup">
@@ -58,7 +50,6 @@
       <button id="confirmar" type="button">Sí, soy mayor de edad</button>
     </div>
   </div>
-
   <!-- Menu horizontal paginas-->
   <header class="header">
     <div class="container logo-nav-container">
@@ -77,20 +68,17 @@
       </nav>
     </div>
   </header>
-
   <div>
     <button id="menu-button">
       <img src="./assets/media/images/hamburguesa.svg" alt="Menú">
     </button>
   </div>
-
   <section id="bienvenido" class="home">
     <div class="contenedor head">
       <h1 class="titulo">Bienvenido a Cervecería Cervisia</h1>
       <p class="copy">Disfruta de nuestras deliciosas cervezas artesanales</p>
     </div>
   </section>
-
   <section id="inicio"
     class="block block-block-content block-block-content900d7313-ad4b-4956-9165-9e27d53560bf clearfix">
     <div class="block-content block-content--type-bloque-titulo-con-texto block-content--view-mode-full ds-1col clearfix contenedor">
@@ -105,11 +93,10 @@
     <hr>
     </div>
   </section>
-  
   <!--  Cartel Widget Compras Transparente TADA -->
   <section id="block-abipacowidget" class="block block-ab-widget-paco clearfix">
     <div class="widget left_bottom mobile tablet desktop"
-      style="width: 220px; height: 305px; background: transparent; z-index: 99999999999999;">
+      style="width: 220px; height: 440px; background: transparent; z-index: 99999999999999;">
       <!-- Añadir Visibilidad-->
       <div class="widget_background"
         style="background:transparent;background-image:url(./assets/media/images/WhatsApp\ Image\ 2023-07-26\ at\ 3.37.20\ PM.jpeg); background-size: 25px 50px; border-radius: 16px;">
@@ -132,7 +119,7 @@
                   precios mágicos</p>
               </div>
               <div>
-                <img class="QR" src="./assets/media/icons/QR-Compras.svg" width="60px" height="60px"  ;>
+                <img class="QR" src="./assets/media/icons/QR_Compras.png" style="background:transparent; padding: 5px 20px 5px 5px;" width="200" height="200"  ;>
               </div>
               <div class="body_content--btn" style="margin-bottom: 0rem;">
                 <a href="./pages/market.html" target="_blank" class="body_btn--a"
@@ -177,13 +164,29 @@
     </div>
     <!-- Agrega más cervezas aquí -->
   </section>
-  
-  <footer>
-    <hr>
-    <!-- Pie de Pagina Agregar Participantes del Grupo -->
-    <p>&copy; 2023 Cervecería Cervisia. Todos los derechos reservados a <br>Grp24 - Federico Ponce - Tear Axel - José
-      Moisés - Chol Gastón .</p>
-    <hr>
+       <!-- Footer de la página -->
+     <footer id="contacto">
+      <div class="contenedor footer-content">
+          <div class="contact-us">
+              <h2 class="brand">Cervisia</h2>
+              <p>La mejor cerveceria en la actualidad</p>
+              <!-- Pie de Pagina Agregar Participantes del Grupo -->
+              <p>&copy; 2023 Cervecería Cervisia. Todos los derechos reservados a <br>Grp24 - Federico Ponce - Tear Axel - José
+               Moisés - Chol Gastón .</p>
+          </div>
+          <div class="social-media">
+              <a href="" class="social-media-icon">
+                  <i class='bx bxl-facebook'></i>
+              </a>
+              <a href="" class="social-media-icon">
+                  <i class='bx bxl-twitter'></i>
+              </a>
+              <a href="" class="social-media-icon">
+                  <i class='bx bxl-instagram'></i>
+              </a>
+          </div>
+      </div>
+      <div class="line"></div>
   </footer>
   <!-- Agregados JavaScript -->
   <!-- JavaScript para Menu horizontal -->
@@ -211,5 +214,4 @@
     }
   </script>
 </body>
-
 </html>
