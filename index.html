@@ -39,7 +39,7 @@
 
   <!-- STYLES -->
 
-  <!-- Estilo para pagina inicio -->
+  <!-- Estilo Genera para toda la Pagina -->
   <link rel="stylesheet" href="./assets/css/style.css">
 
   <!-- Estilo para widget -->
@@ -51,24 +51,28 @@
 </head>
 
 <body>
+  <div id="overlay">
+    <div id="popup">
+      <h2 style="margin: 10px">Confirma tu edad</h2>
+      <p style="margin: 10px">¿Confirmás tener más de 18 años para poder entrar a este sitio?</p>
+      <button id="confirmar" type="button">Sí, soy mayor de edad</button>
+    </div>
+  </div>
+
   <!-- Menu horizontal paginas-->
   <header class="header">
-    <!-- <nav class="menu-navegacion">
-        <a href="#inicio">Inicio</a>
-        <a href="#cervezas">Cervezas</a>
-        <a href="./pages/Formulario.html">Contacto</a>
-        <a href="./pages/market.html">Market</a>
-        <a href="#Historia">Historia</a>
-    </nav> -->
     <div class="container logo-nav-container">
-      <a href="#" class="logo">Logo</a>
+      <a href="#cervezas" title="Cervecería Cervisia" class="logo">
+      <img src="./assets/media/icons/cerveceria-cervesia-dorado-unscreen.gif" width="60px" height="60px"  class="logo">
+      </a>
       <nav class="navigation">
         <ul>
           <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#cervezas">Cervezas</a></li>
+          <li><a href="#cervezas">Promociones</a></li>
           <li><a href="./pages/Formulario.html">Contacto</a></li>
           <li><a href="./pages/market.html">Market</a></li>
-          <li><a href="#Historia">Historia</a></li>
+          <li><a href="./pages/Cartas.html">Carta</a></li>
+          <li><a href="./pages/Historia.html">Historia</a></li>
         </ul>
       </nav>
     </div>
@@ -98,10 +102,11 @@
         tostado de maltas selectas, entonces te damos la bienvenida.
         <br>Porque esto no es una birra normal, es Una Cervisia.
       </p>
+    <hr>
     </div>
   </section>
   
-  <!--  Cartel Compras Transparente de TADA -->
+  <!--  Cartel Widget Compras Transparente TADA -->
   <section id="block-abipacowidget" class="block block-ab-widget-paco clearfix">
     <div class="widget left_bottom mobile tablet desktop"
       style="width: 220px; height: 305px; background: transparent; z-index: 99999999999999;">
@@ -127,7 +132,7 @@
                   precios mágicos</p>
               </div>
               <div>
-                <img class="QR" src="./assets/media/icons/QR-Compras.svg">
+                <img class="QR" src="./assets/media/icons/QR-Compras.svg" width="20px" height="20px"  ;>
               </div>
               <div class="body_content--btn" style="margin-bottom: 0rem;">
                 <a href="./pages/market.html" target="_blank" class="body_btn--a"
@@ -138,47 +143,52 @@
             </div>
           </div>
           <div class="widget_footer" style="background:transparent;height: auto;">
-            <img src="./assets/media/image/Vive-responsable%20%281%29.png">
+            <img src="./assets/media/images/Vive-responsable.png">
           </div>
         </div>
       </div>
     </div>
+ <!-- Inicio Promociones Cerveza-->
   </section>
-
-  <section id="cervezas">
-    <div class="contenedor">
-      <h2 class="subtitulo">Nuestras Cervezas</h2>
+  <section class="promo" id="cervezas">
+    <div class="tarjeta">
+      <h2 class="subtitulo">Nuestras Cervezas en Promoción</h2>
       <div class="cerveza">
-        <img src="./assets/media/image/botella Ámbar.png" alt="Cerveza 1">
-        <h3>Cerveza 1</h3>
-        <p>Descripción de la cerveza 1.</p>
+        <img src="./assets/media/images/Botella_Ámbar.webp" alt="Cerveza Ambar">
+        <h3>Cerveza Ambar</h3>
+        <p>Descripción de la cerveza Ambar.</p>
       </div>
       <div class="cerveza">
-        <img src="./assets/media/image/botella Negra.png" alt="Cerveza 2">
-        <h3>Cerveza 2</h3>
-        <p>Descripción de la cerveza 2.</p>
+        <img src="./assets/media/images/Botella_Negra.webp" alt="Cerveza Negra">
+        <h3>Cerveza Negra</h3>
+        <p>Descripción de la cerveza Negra.</p>
       </div>
       <div class="cerveza">
-        <img src="./assets/media/image/botella Especial.png" alt="Cerveza 3">
-        <h3>Cerveza 3</h3>
-        <p>Descripción de la cerveza 3.</p>
+        <img src="./assets/media/images/Botella_Especial.webp" alt="Cerveza Rubia Especial">
+        <h3>Cerveza Rubia Especial</h3>
+        <p>Descripción de la cerveza Rubia Especial.</p>
       </div>
+    </div>
+    <div class="cerveza">
+      <img src="./assets/media/images/Botella_Limitada_Especial.webp" alt="Cerveza Edición Especial">
+      <h3>Cerveza Edición Especial</h3>
+      <p>Descripción de la cerveza edición especial con copas de regalo.</p>
     </div>
     <!-- Agrega más cervezas aquí -->
   </section>
-
+  
   <footer>
+    <hr>
     <!-- Pie de Pagina Agregar Participantes del Grupo -->
     <p>&copy; 2023 Cervecería Cervisia. Todos los derechos reservados a <br>Grp24 - Federico Ponce - Tear Axel - José
       Moisés - Chol Gastón .</p>
+    <hr>
   </footer>
   <!-- Agregados JavaScript -->
   <!-- JavaScript para Menu horizontal -->
   <script src="./assets/js/script.js"></script>
   <!-- JavaScript para Cartel Cookies -->
   <script src="./assets/js/Cartel-Cookies.js "></script>
-  <!-- JavaScript para  -->
-  <script src=""></script>
   <script>
     const menuButton = document.getElementById("menu-button");
     const widget = document.getElementById("block-abipacowidget");

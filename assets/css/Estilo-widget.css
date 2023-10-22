@@ -87,10 +87,8 @@
 }
 .QR {
   background:transparent;
-  padding: 12px;
-  width: 100%;
-  height: 60px;
-  }
+   }
+   
 .widget .widget_body .widget_body--content .body_content--text.center {
   text-align: center;
 }
