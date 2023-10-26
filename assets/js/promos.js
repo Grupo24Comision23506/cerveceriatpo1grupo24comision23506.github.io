@@ -1,25 +1,66 @@
-const carrusel = document.querySelector('.carrusel');
-const cervezas = document.querySelectorAll('.cerveza');
-const scrollStep = cervezas.length > 0 ? cervezas[0].offsetWidth : 0; // Calcula el ancho de cada tarjeta
-let scrollValue = 0;
+const carrusel = document.querySelector(".carrusel-inner");
+const cervezas = document.querySelectorAll(".cerveza");
+const botonesContainer = document.querySelector(".botones");
 
-function scrollCarrusel(direction) {
-  if (direction === 'right') {
-    scrollValue += scrollStep;
-  } else {
-    scrollValue -= scrollStep;
-  }
+let currentIndex = 0;
 
-  scrollValue = Math.max(-carrusel.scrollWidth + carrusel.clientWidth, Math.min(0, scrollValue));
-
-  carrusel.style.transform = `translateX(${scrollValue}px)`;
+for (let i = 0; i < cervezas.length; i++) {
+  const boton = document.createElement("button");
+  boton.classList.add("boton");
+  boton.setAttribute("data-slide", i);
+  botonesContainer.appendChild(boton);
 }
 
-// Refactoriza el evento para no repetir código
-function handleScrollClick(direction) {
-  return () => scrollCarrusel(direction);
+const botones = document.querySelectorAll('.boton');
+
+botones[0].classList.add('activo');
+
+botones.forEach((boton, i) => {
+  boton.addEventListener('click', () => {
+    currentIndex = i; // Actualiza el índice actual
+    botones.forEach((cadaPunto, j) => {
+      if (j === i) {
+        cadaPunto.classList.add('activo');
+      } else {
+        cadaPunto.classList.remove('activo');
+      }
+    });
+    updateCarrusel(); // Actualiza el carrusel
+  });
+});
+
+function updateCarrusel() {
+  cervezas.forEach((cerveza, i) => {
+    const offset = i - currentIndex;
+    let transformValue = `translateX(${offset * 100}%)`;
+
+    // Ajusta la transformación solo si no es el último elemento
+    if (i === cervezas.length - 1) {
+      transformValue = `translateX(${offset * 100 - 10}%)`;
+    } else if (i === cervezas.length - 2) {
+      transformValue = `translateX(${offset * 100 - 10}%)`;
+    } else if (i === cervezas.length - 3) {
+      transformValue = `translateX(${offset * 100 - 7}%)`;
+    } else if (i === cervezas.length - 4) {
+      transformValue = `translateX(${offset * 100 - 5}%)`;
+    } else if (i === cervezas.length - 5) {
+      transformValue = `translateX(${offset * 100 - 4}%)`;
+    } else if (i === cervezas.length - 6) {
+      transformValue = `translateX(${offset * 100 - 2}%)`;
+    } else {
+      transformValue = `translateX(${offset * 100}%)`;
+    }
+
+    cerveza.style.transform = transformValue;
+  });
+
+  // Calcula el valor de transformación para centrar horizontalmente el carrusel
+  const carruselWidth = carrusel.offsetWidth;
+  const imageWidth = cervezas[0].offsetWidth;
+  const targetPosition = -currentIndex * imageWidth + (carruselWidth - imageWidth) / 2;
+
+  // Aplica la transformación horizontal al carrusel
+  carrusel.style.transform = `translateX(${targetPosition}px) translateY(0)`;
 }
 
-// Agrega controladores de eventos para los botones de desplazamiento
-document.querySelector('#scrollLeft').addEventListener('click', handleScrollClick('left'));
-document.querySelector('#scrollRight').addEventListener('click', handleScrollClick('right'));
+updateCarrusel();

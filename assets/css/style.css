@@ -10,6 +10,27 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+.promo {
+    text-align: center;
+    padding-top: 6rem;
+  }
+/*   
+  .cervezas-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 20px;
+  }
+  
+  .cerveza {
+    text-align: center;
+  }
+  
+  .cerveza img {
+    max-width: 100%;
+    height: auto;
+  } */
+
 .contenedor {
     width: 90%;
     max-width: 1200px;
@@ -294,7 +315,7 @@ footer {
 .video-background {
     position: relative;
     width: 100%;
-    height: 100vh; 
+    /* height: 100vh; */
 }
 
 #video {
@@ -306,6 +327,7 @@ footer {
     height: 100%;
     object-fit: cover;
 }
+
 /* Fin Video Fondo */
 
 /* Tarjetas Promocion Pantalla Inicio */
@@ -317,38 +339,103 @@ footer {
     white-space: nowrap;
     justify-content: center;
     align-items: center;
+    height: 100%; /* Asegura que el carrusel tome todo el alto del contenedor padre */
+    min-height: 100%; /* Asegura que el carrusel siempre tenga al menos el 100% del alto del contenedor */
   }
-  
-  .cerveza {
+
+  .carrusel-inner {
+    display: flex;
+    width: 100%; /* Ancho igual al total de las imágenes */
+    transition: transform 0.3s;
+  }
+
+.carrusel-inner .cerveza {
     flex: 0 0 auto;
-    width: auto; /* Ancho de cada tarjeta */
+    width: 100%;
+    transition: transform 0.3s;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+}
+
+
+.cerveza {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 10px;
     margin: 10px;
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
     border-radius: 5px;
-    background:transparent;
+    background: transparent;
     max-width: 100%;
-    height: auto;
+    min-height: 100%;
+    text-align: center; /* Alineación de texto centrada */
   }
   
-  .carrusel::-webkit-scrollbar {
+  .cerveza img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    margin: auto; /* Centra la imagen horizontalmente */
+    display: block; /* Elimina espacio adicional debajo de la imagen */
+  }
+  
+  
+
+.cerveza-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cerveza h3,
+.cerveza p {
+    color: white;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+
+}
+
+.boton {
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    border: 2px solid black;
+    background-color: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: 1rem
+}
+
+.boton.activo {
+    background-color: black;
+    color: white;
+}
+
+
+
+.carrusel::-webkit-scrollbar {
     color: rgb(180, 135, .5)eff7;
     width: 12px;
-  }
-  
-  .carrusel::-webkit-scrollbar-thumb {
+}
+
+.carrusel::-webkit-scrollbar-thumb {
     background-color: #0074d9;
     border-radius: 10px;
 
-  .flecha-carrusel-izquierda{
-    
-  }  
+    .flecha-carrusel-izquierda {}
 
-  .flecha-carrusel-derecha{
+    .flecha-carrusel-derecha {}
 
-  }
+}
 
-  }/* Fin Carrusel de Promos Inicio */ 
+/* Fin Carrusel de Promos Inicio */
 
 .navigation ul {
     z-index: 999;
@@ -572,24 +659,24 @@ section {
     opacity: 0;
     z-index: 999;
     transition: visibility 0s, opacity 0.5s;
-  }
+}
 
-  #popup {
+#popup {
     background-color: #fff;
     padding: 20px;
     text-align: center;
-  }
+}
 
-  #confirmar {
+#confirmar {
     padding: 10px 20px;
     background-color: #cf7a35;
     color: #fff;
     border: none;
     cursor: pointer;
-  }
+}
 
-  #confirmar:hover {
+#confirmar:hover {
     background-color: #eb7e25;
-  }
+}
 
 /* Puedes añadir estilos adicionales según tus necesidades */
