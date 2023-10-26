@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+    <!-- CHARSET -->
+    <meta charset="UTF-8">
+    <!-- IE-EDGE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- VIEWPORT -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- STYLES -->
+    <!-- Estilo Genera para toda la Pagina -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/market.css">
+    <link rel="stylesheet" href="../assets/css/carrito.css">
+    <!-- Links del CSS y fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <title>Los Mejores Precios del Mercado - Market Cervesia</title>
+</head>
+<body>
+   <!-- Cartel Mayor de Edad -->
+    <div id="overlay">
+        <div id="popup">
+          <h2 style="margin: 10px">Confirma tu edad</h2>
+          <p style="margin: 10px">¿Confirmás tener más de 18 años para poder entrar a este sitio?</p>
+          <button id="confirmar" type="button">Sí, soy mayor de edad</button>
+        </div>
+      </div>
+  <!-- Header de la página -->
+  <!-- Menu horizontal paginas-->
+  <header class="header">
+    <div class="container logo-nav-container">
+      <a href="../index.html#promo" title="Cervecería Cervisia" class="logo">
+        <img src="../assets/media/icons/cerveceria-cervesia-dorado-unscreen.gif" width="60px" height="60px"  class="logo">
+      </a>
+      <nav class="navigation">
+        <ul>
+          <li><a href="../index.html#bienvenido">Inicio</a></li>
+          <li><a href="../index.html#promo">Promociones</a></li>
+          <li><a href="../pages/Formulario.html">Contacto</a></li>
+          <li><a href="../pages/Carrito.html">Market</a></li>
+          <li><a href="../pages/Cartas.html">Cartas</a></li>
+          <li><a href="../pages/Historia.html">Historia</a></li>
+          <button id="menu-button" href="../index.html#bienvenido" style="background:transparent;height: auto;">
+            <img src="../assets/media/images/hamburguesa.svg" alt="Menú">
+          </button>
+        </ul>
+      </nav>
+    </div>
+  </header>
+<div class="line"></div>
+  <div class="video-background">
+    <video autoplay muted loop id="video" poster="../assets/media/images/fondo.png">
+        <source src="../assets/media/video/Brindis_Market2.mp4" type="video/mp4">
+        Tu navegador no soporta videos HTML5.
+    </video>
+    <div class="line"></div>
+  <!-- Body de la página -->
+<body>
+    <h1>Carrito de Compras</h1>
+    <div class="line"></div>
+    <div class="contenedor">
+            <div id="filter">
+            <input type="text" id="productName" placeholder="Nombre del producto">
+            <input type="number" id="minPrice" placeholder="Precio mínimo">
+            <input type="number" id="maxPrice" placeholder="Precio máximo">
+            <button id="filterButton">Filtrar</button>
+        </div>
+        </div>
+        <div class="productos"  id="contenedorProducto"><div id="products"><!-- Aquí se mostrarán los productos --></div></div>
+        <div class="paginacion" id="paginacion"></div>
+        <div id="cart">
+            <h2>Carrito de Compras</h2>
+            <ul id="cartItems">
+                <!-- Aquí se mostrarán los productos seleccionados -->
+            </ul>
+            <p>Total en dólares: <span id="totalPrice"></span></p>
+        </div>
+      </div>    
+        
+    <!-- Footer de la página -->
+<footer id="contacto">
+    <div class="contenedor footer-content">
+        <div class="contact-us">
+            <h2 class="brand">Cervisia</h2>
+            <p>La mejor cerveceria en la actualidad</p>
+            <!-- Pie de Pagina Agregar Participantes del Grupo -->
+            <p>&copy; 2023 Cervecería Cervisia. Todos los derechos reservados a <br>Grp24 - Federico Ponce - Tear Axel - José Moisés Céspedes Gutiérrez - Chol Gastón .</p>
+        </div>
+        <div class="social-media">
+            <a href="" class="social-media-icon">
+              <i class='bx bxl-facebook'></i>
+            </a>
+            <a href="" class="social-media-icon">
+              <i class='bx bxl-twitter'></i>
+            </a>
+            <a href="" class="social-media-icon">
+              <i class='bx bxl-instagram'></i>
+            </a>
+        </div>
+    </div>
+    <div class="line"></div>
+  </footer>
+    <script src="../assets/js/carrito.js"></script>
+</body>
+</html>

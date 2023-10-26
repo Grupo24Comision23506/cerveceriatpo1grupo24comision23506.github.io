@@ -37,22 +37,8 @@ confirmarMayorDeEdad.addEventListener('click', (event) => {
   localStorage.setItem('mayorEdad', 1)
 })
 
-/* -------------------------------------------------------------------------- */
-/*                     Funciones de control de formulario                     */
-/* -------------------------------------------------------------------------- */
+// Armado de lista
 
-// FIXME: NO SE SI ES ESTO LO QUE NO FUNCIONA
-  formulario.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const busqueda = document.querySelector('#busqueda').value;
-    const precioMin = document.querySelector('#precioMin').value;
-    const precioMax = document.querySelector('#precioMax').value;
-    filtrarProductos(busqueda, precioMin, precioMax);
-  });
-
-/* -------------------------------------------------------------------------- */
-/*                            Funciones de filtrado                           */
-/* -------------------------------------------------------------------------- */
 function obtenerProductos() {
   fetch(apiUrl)
   .then(response => response.json())
@@ -63,26 +49,6 @@ function obtenerProductos() {
   })
   .catch(error => console.error(error));
 }
-
-// FIXME: NO APLICA EL FILTRO
-function filtrarProductos(busqueda, precioMin, precioMax) {
-  productosFiltrados = data.filter(producto => {
-    const precio = parseFloat(producto.price.slice(1))
-    if (
-      // Si coincide el nombre con el que busqué ó si los precios coinciden
-      producto.name.toLowerCase().includes(busqueda.toLowerCase()) ||
-      (precio === '' || (precio >= precioMin && precio <= precioMax))
-    ) {
-      return true;
-    }
-    return false;
-  });
-
-  mostrarProductos(1);
-  mostrarPaginacion();
-}
-
-
 
 // Recorro el array de productos para mostrarlos
 function mostrarProductos(pagina) {
@@ -143,3 +109,42 @@ function mostrarPaginacion() {
 
 // Cargar todos los productos al cargar la página
 obtenerProductos();
+
+/* -------------------------------------------------------------------------- */
+/*                            Funciones de filtrado                           */
+/* -------------------------------------------------------------------------- */
+
+// Filtrado para pagina market
+ document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("form");
+    const busqueda = document.getElementById("busqueda");
+    const precioMin = document.getElementById("precioMin");
+    const precioMax = document.getElementById("precioMax");
+    const resultados = document.getElementById("resultados");
+    
+    // Agrega un evento de envío al formulario
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      filterProducts();
+    });
+    
+    // Función para filtrar los productos
+    function filterProducts() {
+      const busquedaText = busqueda.value.toLowerCase();
+      const precioMinValue = parseFloat(precioMin.value) || 0;
+      const precioMaxValue = parseFloat(precioMax.value) || Number.POSITIVE_INFINITY;
+      
+      const productos = document.querySelectorAll(".producto");
+      
+      resultados.innerHTML = ""; // Limpia los resultados actuales
+      
+      productos.forEach(function (producto) {
+        const nombreProducto = producto.querySelector(".nombre-producto").textContent.toLowerCase();
+        const precioProducto = parseFloat(producto.querySelector(".precio-producto").textContent);
+        
+        if (nombreProducto.includes(busquedaText) && precioProducto >= precioMinValue && precioProducto <= precioMaxValue) {
+          resultados.appendChild(producto.cloneNode(true));
+        }
+      });
+    }
+  });

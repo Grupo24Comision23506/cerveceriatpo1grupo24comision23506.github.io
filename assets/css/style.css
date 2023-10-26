@@ -38,6 +38,7 @@ header {
     left: 0;
     top: 0;
     right: 0;
+    z-index: 999;
 
 }
 
@@ -289,14 +290,65 @@ footer {
     font-size: 1.4em;
 }
 
-/*.video {
+/* Video de Fondo*/
+.video-background {
     position: relative;
-    width: 100vh;
-    height: 50vh;
-    -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-}  */
+    width: 100%;
+    height: 100vh; 
+}
+
+#video {
+    position: absolute;
+    z-index: -3;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* Fin Video Fondo */
+
+/* Tarjetas Promocion Pantalla Inicio */
+.carrusel {
+    display: flex;
+    overflow: hidden;
+    max-width: 100%;
+    margin: 0 auto;
+    white-space: nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cerveza {
+    flex: 0 0 auto;
+    width: auto; /* Ancho de cada tarjeta */
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background:transparent;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .carrusel::-webkit-scrollbar {
+    color: rgb(180, 135, .5)eff7;
+    width: 12px;
+  }
+  
+  .carrusel::-webkit-scrollbar-thumb {
+    background-color: #0074d9;
+    border-radius: 10px;
+
+  .flecha-carrusel-izquierda{
+    
+  }  
+
+  .flecha-carrusel-derecha{
+
+  }
+
+  }/* Fin Carrusel de Promos Inicio */ 
 
 .navigation ul {
     z-index: 999;
@@ -518,6 +570,7 @@ section {
     align-items: center;
     visibility: hidden;
     opacity: 0;
+    z-index: 999;
     transition: visibility 0s, opacity 0.5s;
   }
 

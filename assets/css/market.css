@@ -3,30 +3,30 @@
   flex-wrap: wrap;
 }
 
-.filtro {
+.filter {
   width: 25%;
   padding: 10px;
   box-sizing: border-box;
 }
 
-.filtro form {
+.filter form {
   display: flex;
   flex-direction: column;
 }
 
-.filtro label {
+.filter label {
   margin-bottom: 5px;
 }
 
-.filtro input,
-.filtro select {
+.filter input,
+.filter select {
   margin-bottom: 10px;
   padding: 5px;
   border-radius: 5px;
   border: 1px solid #ccc;
 }
 
-.filtro button {
+.filter button {
   padding: 5px 10px;
   border-radius: 5px;
   background-color: #007bff;

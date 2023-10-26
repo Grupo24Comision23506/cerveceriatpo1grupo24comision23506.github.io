@@ -24,7 +24,7 @@ if (localStorage.getItem('mayorEdad') == '' || localStorage.getItem('mayorEdad')
           overlay.style.opacity = "0";
         });
         s
-        // Aparee¿e a los 400ms de invocar a la pantalla
+        // Apareece a los 400ms de invocar a la pantalla
         setTimeout(function() {
           overlay.style.visibility = "visible";
           overlay.style.opacity = "1";
