@@ -85,67 +85,57 @@ main, body,section{
 }
 
 
-/* Estilo para imágenes a ancho completo */
-/* Estilo para imágenes a ancho completo */
-.full-width {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin: 0;
-}
+/* historia*/
 
-/* Estilo para contenedor de imágenes con título y texto */
-.image-container {
-  position: relative;
-  width: 100%;
-  height: auto;
-  display: block;
-  margin: 0;
-}
-
-/* Estilo del texto superpuesto */
-.image-text {
-  position: absolute;
-  top: 50%; /* Coloca el texto en el centro verticalmente */
-  left: 0;
-  width: 100%;
-  background-color:transparent;
-  color: #fffdfd; /* Color del texto sin sombreado */
-  padding: 20px;
-  text-align: center;
-}
-
-/* Estilos para los títulos y textos */
-.image-text h2 {
-  font-size: 32px;
-  margin-bottom: 10px;
-  font-weight: bold;
-  font-family: 'Agbalumo';
-  margin-top: 15px; /* Ajusta el margen superior para mover el párrafo hacia abajo */
-  margin-left: 25px; 
-  }
-
-
-.image-text p {
-  font-size: 18px;
-  font-family: 'Times New Roman', Times, serif;
-  font-weight: bold;
-
-}
-/* Eliminar márgenes en el cuerpo de la página */
 body {
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
 
-.centered-image {
+.image-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.centered-image img {
-  max-width: 100%;
-  max-height: 100%;
+.image {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 10px;
+}
+
+.slider-image {
+  display: none;
+}
+
+.slider-controls {
+  text-align: center;
+  margin-top: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #555;
 }
