@@ -29,7 +29,7 @@
           <li><a href="../index.html#bienvenido">Inicio</a></li>
           <li><a href="../index.html#promo">Promociones</a></li>
           <li><a href="../pages/Formulario.html">Contacto</a></li>
-          <li><a href="../pages/Carrito.html">Market</a></li>
+          <li><a href="../pages/market.html">Market</a></li>
           <li><a href="../pages/Cartas.html">Cartas</a></li>
           <li><a href="../pages/Historia.html">Historia</a></li>
           <button id="menu-button" href="../index.html#bienvenido" style="background:transparent;height: auto;">
@@ -39,8 +39,8 @@
       </nav>
     </div>
   </header>
-<div class="line"></div>
-      <div class="video-background">
+<div class="line" style="padding: 2vmax;"></div>
+      <div class="video-background" style="height:100vh;  ";>
         <video autoplay muted loop id="video" poster="../assets/media/images/fondo.png">
             <source src="../assets/media/video/Cerveza_Tirada2.mp4" type="video/mp4">
             Tu navegador no soporta videos HTML5.
@@ -54,7 +54,10 @@
           <h2>Descarga Carta Comidas</h2>
           <img class="QR" src="../assets/media/icons/QR_Carta_Comidas.png" width="200px" height="200px"  ;>
         </a>
-        <embed src="../assets/media/pdf/Carta&Comidas.pdf" type="application/pdf" width="420px" height="630">
+        <object data="../assets/media/pdf/Carta&Comidas.pdf" type="application/pdf" width="420px" height="630px">
+          <p>No es posible mostrar el PDF.</p>
+        </object>
+   <!-- <embed src="../assets/media/pdf/Carta&Comidas.pdf" type="application/pdf" width="420px" height="630"> -->
           <hr>
         </Div>
         <Div class="tragos">
@@ -64,13 +67,36 @@
             <h2>Descarga Carta Tragos & Bebidas</h2>
             <img class="QR" src="../assets/media/icons/QR_Carta_Tragos.png" width="200px" height="200px"  ;>
           </a>
-          <embed src="../assets/media/pdf/Tragos&Bebidas.pdf" type="application/pdf" width="420px" height="630">
-            <hr>    
+          <iframe src="../assets/media/pdf/Tragos&Bebidas.pdf" width="420px" height="630px">
+            <p>No es posible mostrar el PDF.</p>
+          </iframe>
+    <!--  <embed src="../assets/media/pdf/Tragos&Bebidas.pdf" type="application/pdf" width="420px" height="630">  -->
+            <hr>
           </Div>
-        </section>
-        <!-- Footer de la página -->
-        <footer id="contacto">
-          <div class="contenedor footer-content">
+    </section>
+    <script>
+      //  Script PopUp Oferta  -   <img src="../assets/media/images/hamburguesa.svg" alt="Menú">
+      // Función para abrir el popup automáticamente después de 3 segundos
+function abrirPopup() {
+    var popup = window.open("../pages/cartel emergente.html", "MiPopup", "width=600,height=400");
+    setTimeout(function() {
+        popup.close();
+    }, 3000); // 3000 milisegundos = 3 segundos
+}
+
+// Función para cerrar el popup utilizando closePopupOferta
+function closePopupOferta() {
+    if (popup && !popup.closed) {
+        popup.close();
+    }
+}
+
+// Llamar a abrirPopup automáticamente al cargar la página
+window.addEventListener("load", abrirPopup);
+</script>
+  <!-- Footer de la página -->
+  <footer id="contacto">
+    <div class="contenedor footer-content">
     <div class="contact-us">
       <h2 class="brand">Cervisia</h2>
       <p>La mejor cerveceria en la actualidad</p>

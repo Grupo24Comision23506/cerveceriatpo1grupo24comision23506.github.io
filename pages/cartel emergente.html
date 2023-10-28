@@ -7,20 +7,29 @@
   <title>Ofertas</title>
 </head>
 <body>
-  <div class="neon">
-      <span style="--l: '¡O';">¡O</span>
-      <span style="--l: 'f' ;">f</span>
-      <span style="--l: 'e' ;">e</span>
-      <span style="--l: 'r' ;">r</span>
-      <span style="--l: 't' ;">t</span>
-      <span style="--l: 'a!';">a!</span>
-  </div>
-  <div class="popup">
-    <div class="popup-content">
-      <span class="close-btn" onclick="closePopup()">&times;</span>
-      <h2>¡Oferta especial!</h2>
-      <p>Descuento del 20% en todos los productos.</p>
+<section class="fondo-oferta">
+ <div class="popup-oferta">
+   <div class="neon">
+     <span style="--l: '¡O';">¡O</span>
+     <span style="--l: 'f' ;">f</span>
+     <span style="--l: 'e' ;">e</span>
+     <span style="--l: 'r' ;">r</span>
+     <span style="--l: 't' ;">t</span>
+     <span style="--l: 'a!';">a!</span>
+     <div class="popup-content-oferta">
+       <span class="close-btn-oferta" onclick="closePopupoferta()">&times;</span>
+       <h2 class="text-cartel-oferta">¡Oferta especial!</h2>
+       <p class="text-cartel-oferta">Descuento del 20% en todos los productos.</p>
+      </div>
     </div>
   </div>
+   <div id="fondo-oferta" class="fondo-oferta" style="z-index: -3; opacity: 80%;">
+    <video autoplay loop muted poster="../assets/media/images/Mask Group2 (1).jpg">
+      <source src="../assets/media/video/Brindis_Market1.mp4" type="video/mp4">
+      <!-- Agrega más <source> elementos para otros formatos de video -->
+      Tu navegador no soporta la etiqueta de video.
+    </video>
+  </div>
+</section>
 </body>
 </html>

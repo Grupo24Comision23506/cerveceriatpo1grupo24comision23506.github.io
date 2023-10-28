@@ -14,22 +14,6 @@ body {
     text-align: center;
     padding-top: 6rem;
   }
-/*   
-  .cervezas-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin: 20px;
-  }
-  
-  .cerveza {
-    text-align: center;
-  }
-  
-  .cerveza img {
-    max-width: 100%;
-    height: auto;
-  } */
 
 .contenedor {
     width: 90%;
@@ -315,7 +299,6 @@ footer {
 .video-background {
     position: relative;
     width: 100%;
-    /* height: 100vh; */
 }
 
 #video {
@@ -327,7 +310,6 @@ footer {
     height: 100%;
     object-fit: cover;
 }
-
 /* Fin Video Fondo */
 
 /* Tarjetas Promocion Pantalla Inicio */
@@ -368,7 +350,6 @@ footer {
     justify-content: center;
     padding: 10px;
     margin: 10px;
-    /* border: 1px solid #ccc; */
     border-radius: 5px;
     background: transparent;
     max-width: 100%;
