@@ -1,7 +1,6 @@
 /* Estilo para pagina historia la imagen de fondo */
 main, body,section{
   color: rgb(180, 135, .5)eff7;
-  background-color: #895351;
   font-family: Georgia, 'Times New Roman', Times, serif;
   text-decoration-color: beige;
   text-size-adjust: 20px;
@@ -82,5 +81,68 @@ main, body,section{
     right: 10px;
 }
 
-<!--numeros-->
 
+/* Estilo para imágenes a ancho completo */
+/* Estilo para imágenes a ancho completo */
+.full-width {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+}
+
+/* Estilo para contenedor de imágenes con título y texto */
+.image-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+}
+
+/* Estilo del texto superpuesto */
+.image-text {
+  position: absolute;
+  top: 50%; /* Coloca el texto en el centro verticalmente */
+  left: 0;
+  width: 100%;
+  background-color:transparent;
+  color: #fffdfd; /* Color del texto sin sombreado */
+  padding: 20px;
+  text-align: center;
+}
+
+/* Estilos para los títulos y textos */
+.image-text h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-family: 'Agbalumo';
+  margin-top: 15px; /* Ajusta el margen superior para mover el párrafo hacia abajo */
+  margin-left: 25px; 
+  }
+
+
+.image-text p {
+  font-size: 18px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+
+}
+/* Eliminar márgenes en el cuerpo de la página */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.centered-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.centered-image img {
+  max-width: 100%;
+  max-height: 100%;
+}
