@@ -55,7 +55,7 @@
   <!-- Menu horizontal paginas-->
   <header class="header">
     <div class="container logo-nav-container">
-      <a href="#promo" title="Cervecería Cervisia" class="logo">
+      <a href="#bienvenido" title="Cervecería Cervisia" class="logo">
         <img src="./assets/media/icons/cerveceria-cervesia-dorado-unscreen.gif" width="60px" height="60px" class="logo">
       </a>
       <nav class="navigation">
@@ -115,7 +115,7 @@
   <!--  Cartel Widget Compras Transparente TADA -->
   <section id="block-abipacowidget" class="block block-ab-widget-paco clearfix">
     <div class="widget left_bottom mobile tablet desktop"
-      style="width: 220px; height: 450px; background: transparent; z-index: 99999999999999;">
+      style="width: 220px; height: 450px; background: transparent;">
       <!-- Añadir Visibilidad-->
       <div class="widget_background"
         style="background:transparent;background-image:url(./assets/media/images/WhatsApp\ Image\ 2023-07-26\ at\ 3.37.20\ PM.jpeg); background-size: 25px 50px; border-radius: 16px;">
@@ -270,25 +270,6 @@
   <script src="./assets/js/index.js" type="module"></script>
   <!-- JavaScript para Carrusel de Promos -->
   <script src="./assets/js/promos.js"></script>
-  <script>
-    const menuButton = document.getElementById("menu-button");
-    const widget = document.getElementById("block-abipacowidget");
-    const closeButton = document.querySelector(".widget_close--btn");
-
-    menuButton.addEventListener("click", toggleMenu);
-    closeButton.addEventListener("click", toggleMenu);
-
-    function toggleMenu() {
-      const menuState = menuButton.getAttribute("data-menu-state");
-
-      if (menuState === "closed") {
-        widget.style.display = "block";
-        menuButton.setAttribute("data-menu-state", "open");
-      } else {
-        widget.style.display = "none";
-        menuButton.setAttribute("data-menu-state", "closed");
-      }
-    }
-  </script>
+  <script src="./assets/js/popup.js"></script>
 </body>
 </html>

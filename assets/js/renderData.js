@@ -16,7 +16,6 @@ export function renderData(data, dataDolar) {
     }
     try {
         const validItems = data.filter(item => item.image && item.image !== '404 (Not Found)');
-
         for (item of validItems) {
             precio = item.price;
             const precioSinSigno = parseFloat(precio.replace("$", ""));
@@ -27,7 +26,7 @@ export function renderData(data, dataDolar) {
             });
             let patter = `
                     <div>
-                        <img src="${item.image}" onerror="this.style.display='none'">
+                        <img src="${item.image}" onerror="this.style.display='none'" title="${item.name}">
                         <div class="seccion">
                             <h2 class="n-seccion">Precio: ${numeroFormateado}
                                 </h2>

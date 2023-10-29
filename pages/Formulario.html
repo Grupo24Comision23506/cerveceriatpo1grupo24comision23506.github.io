@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es-AR">
+
 <head>
     <!-- CHARSET -->
     <meta charset="UTF-8">
@@ -16,6 +17,7 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <!-- Estilo Formulario -->
     <link rel="stylesheet" href="../assets/css/Formulario.css">
+    <link rel="stylesheet" href="../assets/css/Estilo-widget.css">
     <!-- ICONS FONT & ICONS -->
     <script src="https://kit.fontawesome.com/73f851add2.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,191 +25,250 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 </head>
+
 <body>
-  <!-- Header de la página -->
-  <!-- Menu horizontal paginas-->
-  <header class="header">
-    <div class="container logo-nav-container">
-      <a href="../index.html#promo" title="Cervecería Cervisia" class="logo">
-        <img src="../assets/media/icons/cerveceria-cervesia-dorado-unscreen.gif" width="60px" height="60px"  class="logo">
-      </a>
-      <nav class="navigation">
-        <ul>
-          <li><a href="../index.html#bienvenido">Inicio</a></li>
-          <li><a href="../index.html#promo">Promociones</a></li>
-          <li><a href="../pages/Formulario.html">Contacto</a></li>
-          <li><a href="../pages/market.html">Market</a></li>
-          <li><a href="../pages/Cartas.html">Cartas</a></li>
-          <li><a href="../pages/Historia.html">Historia</a></li>
-          <button id="menu-button" href="../index.html#bienvenido" style="background:transparent;height: auto;">
-            <img src="../assets/media/images/hamburguesa.svg" alt="Menú">
-          </button>
-        </ul>
-      </nav>
-    </div>
-  </header>
-<div class="line"></div>
-    <div class="video-background" style="height:100vh;  ";>
+    <!-- Header de la página -->
+    <!-- Menu horizontal paginas-->
+    <header class="header">
+        <div class="container logo-nav-container">
+            <a href="../index.html#bienvenido" title="Cervecería Cervisia" class="logo">
+                <img src="../assets/media/icons/cerveceria-cervesia-dorado-unscreen.gif" width="60px" height="60px"
+                    class="logo">
+            </a>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="../index.html#bienvenido">Inicio</a></li>
+                    <li><a href="../index.html#promo">Promociones</a></li>
+                    <li><a href="../pages/Formulario.html">Contacto</a></li>
+                    <li><a href="../pages/market.html">Market</a></li>
+                    <li><a href="../pages/Cartas.html">Cartas</a></li>
+                    <li><a href="../pages/Historia.html">Historia</a></li>
+                    <button id="menu-button" href="../index.html#bienvenido"
+                        style="background:transparent;height: auto;">
+                        <img src="../assets/media/images/hamburguesa.svg" alt="Menú">
+                    </button>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="line"></div>
+    <div class="video-background" style="height:100vh;  " ;>
         <video autoplay muted loop id="video" poster="../assets/media/images/fondo.png">
             <source src="../assets/media/video/Brindis_Market2.mp4" type="video/mp4">
             Tu navegador no soporta videos HTML5.
         </video>
-<div class="line"></div>
-<!-- MAIN -->
-<main>
-    <!-- CONTENEDOR FORMULARIO CREAR UNA CUENTA -->  
-    <div class="container-form sign-up">
-        <div class="welcome-back">
-            <div class="message">
-                <!-- TTTULO PANTALLA CREAR UNA CUENTA-->
-                <h2>Bienvenidos a Cervecería Cervisia</h2>
-                <!-- DESCRIPCION DE BOTON INICIAR SECION-->
-                <p>Si ya tienes una cuenta por favor inicia sesion aqui</p>
-                <button class="sign-up-btn">Iniciar Sesion</button>
-            </div>
-        </div>
-        <!-- FORMULARIO -->
-    <form action="#" class="formulario" id="formulario">
-        <!-- TTTULO FORMULARIO CREAR UNA CUENTA-->
-        <h2 class="create-account">Crear una cuenta</h2>
-        <div class="iconos">
-            <div class="border-icon">
-                <i class='bx bxl-instagram'></i>
-            </div>
-            <div class="border-icon">
-                <i class='bx bxl-linkedin' ></i>
-            </div>
-            <div class="border-icon">
-                <i class='bx bxl-facebook-circle' ></i>
-            </div>
-        </div>
-        <p class="cuenta-gratis">Crear una cuenta gratis</p>
-        <!-- GRUPO DE USUARIO -->
-    <div class="formulario__grupo" id="grupo__usuario">
-        <label class="formulario__label">Nombre de usuario</label>
-        <div class="formulario__grupo-input">
-            <input type="text" class="formulario__input" name="usuario" id="usuario" placeholder="Anderson_oca">
-            <i class="formulario__validacion-estado fas fa-times-circle"></i>
-        </div>
-        <p class="formulario__input-error">El usuario debe tener minimo 4 caracteres y solo se admiten números, letras y guión b
-        </div>
-        <!-- GRUPO DE NOMBRE-->
-        <div class="formulario__grupo" id="grupo__nombre">
-            <label class="formulario__label">Nombre y Apellido</label>
-            <div class="formulario__grupo-input">
-                <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Anderson Ocaña Torres">
-                <i class="formulario__validacion-estado fas fa-times-circle"></i>
-        </div>
-        <p class="formulario__input-error">El nombre debe tener minimo 4 caracteres</p>
-    </div>
-    <!-- GRUPO DE CONTRASEÑA 1-->
-    <div class="formulario__grupo" id="grupo__password">
-        <label class="formulario__label">Contraseña</label>
-        <div class="formulario__grupo-input">
-            <input type="password" class="formulario__input" name="password" id="password">
-            <i class="formulario__validacion-estado fas fa-times-circle"></i>
-        </div>
-        <p class="formulario__input-error">La contraseña debe ser de 4 a 12 digitos</p>
-    </div>
-    <!-- GRUPO DE CONTRASEÑA 2-->
-    <div class="formulario__grupo" id="grupo__password2">
-        <label class="formulario__label">Repetir la contraseña</label>
-        <div class="formulario__grupo-input">
-            <input type="password" class="formulario__input" name="password2" id="password2">
-            <i class="formulario__validacion-estado fas fa-times-circle"></i>
-        </div>
-        <p class="formulario__input-error">La contraseña no coincide</p>
-    </div>
-    <!-- GRUPO DE EMAIL -->
-    <div class="formulario__grupo" id="grupo__correo">
-        <label class="formulario__label">Correo Electonico</label>
-        <div class="formulario__grupo-input">
-            <input type="email" class="formulario__input" name="correo" id="correo" placeholder="anderson@ocanatorres.com">
-            <i class="formulario__validacion-estado fas fa-times-circle"></i>
-        </div>
-        <p class="formulario__input-error">El correo debe tener mÍnimo 4 caracteres y sólo se admiten números, letras.</p>
-    </div>
-    <!-- GRUPO DE TELÉFONO -->
-    <div class="formulario__grupo" id="grupo__telefono">
-        <label class="formulario__label">Teléfono</label>
-        <div class="formulario__grupo-input">
-            <input type="telefono" class="formulario__input" name="telefono" id="telefono" placeholder="1154545454">
-            <i class="formulario__validacion-estado fas fa-times-circle"></i>
-        </div>
-        <p class="formulario__input-error">El número debe tener 10 digitos</p>
-    </div>
-    <!-- GRUPO TERMINOS Y CONDICIONES -->
-    <div class="formulario__grupo formulario__grupo-terminos" id="grupo__terminos">
-        <label class="formulario__label">
-            <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
-            <b class="formulario__span">Acepto los terminos y condiciones</b>
-        </label>
-    </div>
-    <!-- MENSAJE DE CAMPOS REQUERIDOS -->
-    <div class="formulario__mensaje" id="formulario__mensaje">
-        <p><i class="fas fa-exclamation-circle"> <b>Error:</b> Debes completar todos los campos</i></p>
-    </div>
-    <!-- GRUPO ENVIAR -->
-    <div class="formulario__grupo formulario__grupo-btn-enviar">
-        <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">El formulario se envió correctamente</p>
-        <input class="formulario__btn" type="submit" value="Enviar">
-    </div>
-</form>
-</div>
-<div class="container-form sign-in">
-    <form action="#" class="formulario" id="formulario">
-        <h2 class="create-account">Iniciar Sesion</h2>
-            <div class="iconos">
-                <div class="border-icon">
-                    <i class='bx bxl-instagram'></i>
+        <div class="line"></div>
+        <!-- MAIN -->
+        <main>
+            <!-- CONTENEDOR FORMULARIO CREAR UNA CUENTA -->
+            <div class="container-form sign-up">
+                <div class="welcome-back">
+                    <div class="message">
+                        <!-- TTTULO PANTALLA CREAR UNA CUENTA-->
+                        <h2>Bienvenidos a Cervecería Cervisia</h2>
+                        <!-- DESCRIPCION DE BOTON INICIAR SECION-->
+                        <p>Si ya tienes una cuenta por favor inicia sesion aqui</p>
+                        <button class="sign-up-btn">Iniciar Sesion</button>
+                    </div>
                 </div>
-                <div class="border-icon">
-                    <i class='bx bxl-linkedin' ></i>
-                </div>
-                <div class="border-icon">
-                    <i class='bx bxl-facebook-circle' ></i>
+                <!-- FORMULARIO -->
+                <form action="#" class="formulario" id="formulario">
+                    <!-- TTTULO FORMULARIO CREAR UNA CUENTA-->
+                    <h2 class="create-account">Crear una cuenta</h2>
+                    <div class="iconos">
+                        <div class="border-icon">
+                            <i class='bx bxl-instagram'></i>
+                        </div>
+                        <div class="border-icon">
+                            <i class='bx bxl-linkedin'></i>
+                        </div>
+                        <div class="border-icon">
+                            <i class='bx bxl-facebook-circle'></i>
+                        </div>
+                    </div>
+                    <p class="cuenta-gratis">Crear una cuenta gratis</p>
+                    <!-- GRUPO DE USUARIO -->
+                    <div class="formulario__grupo" id="grupo__usuario">
+                        <label class="formulario__label">Nombre de usuario</label>
+                        <div class="formulario__grupo-input">
+                            <input type="text" class="formulario__input" name="usuario" id="usuario"
+                                placeholder="Anderson_oca">
+                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                        </div>
+                        <p class="formulario__input-error">El usuario debe tener minimo 4 caracteres y solo se admiten
+                            números, letras y guión b
+                    </div>
+                    <!-- GRUPO DE NOMBRE-->
+                    <div class="formulario__grupo" id="grupo__nombre">
+                        <label class="formulario__label">Nombre y Apellido</label>
+                        <div class="formulario__grupo-input">
+                            <input type="text" class="formulario__input" name="nombre" id="nombre"
+                                placeholder="Anderson Ocaña Torres">
+                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                        </div>
+                        <p class="formulario__input-error">El nombre debe tener minimo 4 caracteres</p>
+                    </div>
+                    <!-- GRUPO DE CONTRASEÑA 1-->
+                    <div class="formulario__grupo" id="grupo__password">
+                        <label class="formulario__label">Contraseña</label>
+                        <div class="formulario__grupo-input">
+                            <input type="password" class="formulario__input" name="password" id="password">
+                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                        </div>
+                        <p class="formulario__input-error">La contraseña debe ser de 4 a 12 digitos</p>
+                    </div>
+                    <!-- GRUPO DE CONTRASEÑA 2-->
+                    <div class="formulario__grupo" id="grupo__password2">
+                        <label class="formulario__label">Repetir la contraseña</label>
+                        <div class="formulario__grupo-input">
+                            <input type="password" class="formulario__input" name="password2" id="password2">
+                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                        </div>
+                        <p class="formulario__input-error">La contraseña no coincide</p>
+                    </div>
+                    <!-- GRUPO DE EMAIL -->
+                    <div class="formulario__grupo" id="grupo__correo">
+                        <label class="formulario__label">Correo Electonico</label>
+                        <div class="formulario__grupo-input">
+                            <input type="email" class="formulario__input" name="correo" id="correo"
+                                placeholder="anderson@ocanatorres.com">
+                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                        </div>
+                        <p class="formulario__input-error">El correo debe tener mÍnimo 4 caracteres y sólo se admiten
+                            números, letras.</p>
+                    </div>
+                    <!-- GRUPO DE TELÉFONO -->
+                    <div class="formulario__grupo" id="grupo__telefono">
+                        <label class="formulario__label">Teléfono</label>
+                        <div class="formulario__grupo-input">
+                            <input type="telefono" class="formulario__input" name="telefono" id="telefono"
+                                placeholder="1154545454">
+                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                        </div>
+                        <p class="formulario__input-error">El número debe tener 10 digitos</p>
+                    </div>
+                    <!-- GRUPO TERMINOS Y CONDICIONES -->
+                    <div class="formulario__grupo formulario__grupo-terminos" id="grupo__terminos">
+                        <label class="formulario__label">
+                            <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
+                            <b class="formulario__span">Acepto los terminos y condiciones</b>
+                        </label>
+                    </div>
+                    <!-- MENSAJE DE CAMPOS REQUERIDOS -->
+                    <div class="formulario__mensaje" id="formulario__mensaje">
+                        <p><i class="fas fa-exclamation-circle"> <b>Error:</b> Debes completar todos los campos</i></p>
+                    </div>
+                    <!-- GRUPO ENVIAR -->
+                    <div class="formulario__grupo formulario__grupo-btn-enviar">
+                        <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">El formulario se envió
+                            correctamente</p>
+                        <input class="formulario__btn" type="submit" value="Enviar">
+                    </div>
+                </form>
+            </div>
+            <div class="container-form sign-in">
+                <form action="#" class="formulario" id="formulario">
+                    <h2 class="create-account">Iniciar Sesion</h2>
+                    <div class="iconos">
+                        <div class="border-icon">
+                            <i class='bx bxl-instagram'></i>
+                        </div>
+                        <div class="border-icon">
+                            <i class='bx bxl-linkedin'></i>
+                        </div>
+                        <div class="border-icon">
+                            <i class='bx bxl-facebook-circle'></i>
+                        </div>
+                    </div>
+                    <p class="cuenta-gratis">¿Aun no tienes una cuenta?</p>
+                    <input type="email" placeholder="Email">
+                    <input type="password" placeholder="Contraseña">
+                    <input type="button" value="Iniciar Sesion">
+                </form>
+                <div class="welcome-back">
+                    <div class="message">
+                        <h2>Bienvenido Cervecería Cervisia</h2>
+                        <p>Si aun no tienes una cuenta por favor registrese aqui</p>
+                        <button class="sign-in-btn">Registrarse</button>
+                    </div>
                 </div>
             </div>
-            <p class="cuenta-gratis">¿Aun no tienes una cuenta?</p>
-            <input type="email" placeholder="Email">
-            <input type="password" placeholder="Contraseña">
-            <input type="button" value="Iniciar Sesion">
-        </form>
-        <div class="welcome-back">
-            <div class="message">
-                <h2>Bienvenido Cervecería Cervisia</h2>
-                <p>Si aun no tienes una cuenta por favor registrese aqui</p>
-                <button class="sign-in-btn">Registrarse</button>
+        </main>
+        <div class="line"></div>
+        <!-- JavaScript para Validacion de Campos  -->
+        <script src="../assets/js/Formulario.js"></script>
+        <!-- JavaScript para Cartel POPUP Oferta -->
+        <script src="../assets/js/popup.js" type="module"></script>
+        <!-- Footer de la página -->
+        <footer id="contacto">
+            <div class="contenedor footer-content">
+                <div class="contact-us">
+                    <h2 class="brand">Cervisia</h2>
+                    <p>La mejor cerveceria en la actualidad</p>
+                    <!-- Pie de Pagina Agregar Participantes del Grupo -->
+                    <p>&copy; 2023 Cervecería Cervisia. Todos los derechos reservados a <br>Grp24 - Federico Ponce -
+                        Tear Axel - José Moisés Céspedes Gutiérrez - Chol Gastón .</p>
+                </div>
+                <div class="social-media">
+                    <a href="" class="social-media-icon">
+                        <i class='bx bxl-facebook'></i>
+                    </a>
+                    <a href="" class="social-media-icon">
+                        <i class='bx bxl-twitter'></i>
+                    </a>
+                    <a href="" class="social-media-icon">
+                        <i class='bx bxl-instagram'></i>
+                    </a>
+                </div>
             </div>
-        </div>
-    </div>
-</main>
-<div class="line"></div>
-<!-- JavaScript para Validacion de Campos  -->
-<script src="../assets/js/Formulario.js"></script>
-<!-- JavaScript para Cartel POPUP Oferta -->
-<script src="./assets/js/script-cartel-emergente.js" type="module"></script>
-<!-- Footer de la página -->
-<footer id="contacto">
-    <div class="contenedor footer-content">
-        <div class="contact-us">
-            <h2 class="brand">Cervisia</h2>
-            <p>La mejor cerveceria en la actualidad</p>
-            <!-- Pie de Pagina Agregar Participantes del Grupo -->
-            <p>&copy; 2023 Cervecería Cervisia. Todos los derechos reservados a <br>Grp24 - Federico Ponce - Tear Axel - José Moisés Céspedes Gutiérrez - Chol Gastón .</p>
-        </div>
-        <div class="social-media">
-            <a href="" class="social-media-icon">
-                <i class='bx bxl-facebook'></i>
-            </a>
-            <a href="" class="social-media-icon">
-                <i class='bx bxl-twitter'></i>
-            </a>
-            <a href="" class="social-media-icon">
-                <i class='bx bxl-instagram'></i>
-            </a>
-        </div>
-    </div>
-</footer>
+        </footer>
+        <!--  Cartel Widget Compras Transparente TADA -->
+        <section style="padding: 0px;" id="block-abipacowidget" class="block block-ab-widget-paco clearfix">
+            <div class="widget left_bottom mobile tablet desktop"
+                style="width: 220px; height: 450px; background: transparent;">
+                <!-- Añadir Visibilidad-->
+                <div class="widget_background"
+                    style="background:transparent;background-image:url(../assets/media/images/WhatsApp\ Image\ 2023-07-26\ at\ 3.37.20\ PM.jpeg); background-size: 25px 50px; border-radius: 16px;">
+                    <div class="widget_content">
+                        <div class="widget_close">
+                            <a class="widget_close--btn"
+                                data-close="&quot;event&quot;: &quot;GAEvent&quot;,&quot;event_category&quot;: &quot;Content&quot;,&quot;event_action&quot;: &quot;button&quot;,&quot;event_label&quot;: &quot;Close&quot;,&quot;interaction&quot;:&quot;true&quot;,&quot;component_name&quot;: &quot;close_widget&quot;,&quot;element_text&quot;: &quot;Cerrar&quot;"
+                                style="background: #aeadad;" data-hover="#ffcc00">
+                                <img src="../assets/media/icons/Close.png" title="Cerrar">
+                            </a>
+                        </div>
+                        <div class="widget_head" style="background-color: #000000;  height: 50px;">
+                            <img src="../assets/media/icons/tada encabezado.jpeg">
+                        </div>
+                        <div class="widget_body" style="margin: 20px;">
+                            <div class="widget_body--content">
+                                <div class="body_content--text center" style="margin-bottom: 1rem;">
+                                    <p class="body--text" data-font="../assets/media/fonts/Montserrat-Black.ttf"
+                                        style="color: #ffffff; font-size: 18px; text-transform: none">Compra tus
+                                        cervezas frías, rápido y a
+                                        precios mágicos</p>
+                                </div>
+                                <div>
+                                    <img class="QR" src="../assets/media/icons/QR_Compras.png"
+                                        style="background:transparent; padding: 5px 20px 5px 5px;" width="200"
+                                        height="200" ;>
+                                </div>
+                                <div class="body_content--btn" style="margin-bottom: 0rem;">
+                                    <a href="../pages/market.html" target="_blank" class="body_btn--a"
+                                        data-value="&quot;event&quot;: &quot;GAEvent&quot;,&quot;event_category&quot;: &quot;Content&quot;,&quot;event_action&quot;: &quot;button&quot;,&quot;event_label&quot;: &quot;widget_tada&quot;,&quot;interaction&quot;:&quot;true&quot;,&quot;component_name&quot;: &quot;btn_comprar_widget_tada&quot;,&quot;element_text&quot;: &quot;comprar&quot;,&quot;campaign_description&quot;: &quot;Widget_collection_Cerveza_Modelo&#039;&quot;"
+                                        data-font="../assets/media/fonts/Montserrat-ExtraBold.ttf" data-hover="#bdbcbc"
+                                        data-color="#000000"
+                                        style="width: 100px; height: 35px; background: #ffcc00; color: #000000; font-size: 16px; border-radius: 14px;text-transform: uppercase;">¡COMPRAR!</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="widget_footer" style="background:transparent;height: auto;">
+                            <img src="../assets/media/images/Vive-responsable.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 </body>
+
 </html>

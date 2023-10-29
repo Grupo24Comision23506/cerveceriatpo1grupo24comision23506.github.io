@@ -1,6 +1,4 @@
-.body{
-    
-}
+
 section{
     background-image: linear-gradient(to bottom, #715674, #130b41dc ), url("../media/images/MODELO-bk_registro.png");
     background-position: center;
@@ -11,15 +9,12 @@ h1{
     padding-top: 2rem;
     padding-bottom: 0.1rem;
 }
-
-QR{
-    background: transparent;
-    display: flex;
-    padding: 20rem;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-}
+button {
+    margin: 5px;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+  }
 
 .carta{
     display: flex;

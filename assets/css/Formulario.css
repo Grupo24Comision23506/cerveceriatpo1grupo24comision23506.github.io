@@ -12,6 +12,13 @@ body {
     color: #fff;
 }
 
+button {
+    margin: 5px;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+  }
+
 .container-form {
     width: 90%;
     height: 90vh;
