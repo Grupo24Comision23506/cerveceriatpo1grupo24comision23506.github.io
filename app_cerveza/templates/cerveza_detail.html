@@ -1,0 +1,17 @@
+{% extends 'base_Cervezeria.html' %}
+{% block content %}
+
+<main>
+    <div class="main-color-cerveza">
+        <h1>{{cerveza.nombre}}</h1>
+        {% for label, value in cerveza.get_fields %}
+
+        <p>{{label | upper}}</p>
+        <p>{{value}}</p>
+
+        {% endfor %}
+
+        <a href="{% url 'cerveza:all' %}">BACK</a>
+    </div>
+</main>
+{% endblock %}

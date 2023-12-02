@@ -1,0 +1,153 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es-AR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- IE-EDGE -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- TITTLE -->
+  <title>Carta Comidas y Carta Tragos & Bebidas </title>
+  <!-- STYLES -->
+  <!-- Estilo Genera para toda la Pagina -->
+  <link rel="stylesheet" href="{% static './css/style.css' %}">
+  <!-- Estilo para pagina inicio -->
+  <link rel="stylesheet" href="{% static './css/pdf.css' %}">
+  <link rel="stylesheet" href="{% static './css/Estilo-widget.css' %}">
+  <!-- Links del CSS y fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+  <!-- Header de la página -->
+  <!-- Menu horizontal paginas-->
+  <header class="header">
+    <div class="container logo-nav-container">
+      <a href="../index.html#bienvenido" title="Cervecería Cervisia" class="logo">
+        <img src="{% static './media/icons/cerveceria-cervesia-dorado-unscreen.gif' %}" width="60px" height="60px"
+          class="logo">
+      </a>
+      <nav class="navigation">
+        <ul>
+          <li><a href="../index.html#bienvenido">Inicio</a></li>
+          <li><a href="../index.html#promo">Promociones</a></li>
+          <li><a href="../pages/Formulario.html">Contacto</a></li>
+          <li><a href="../pages/market.html">Market</a></li>
+          <li><a href="../pages/Cartas.html">Cartas</a></li>
+          <li><a href="../pages/Historia.html">Historia</a></li>
+          <button id="menu-button" style="background:transparent;height: auto;">
+            <img src="../assets/media/images/hamburguesa.svg" alt="Menú">
+          </button>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="line" style="padding: 2vmax;"></div>
+  <div class="video-background" style="height:100vh;  " ;>
+    <video autoplay muted loop id="video" poster="../assets/media/images/fondo.png">
+      <source src="../assets/media/video/Cerveza_Tirada2.mp4" type="video/mp4">
+      Tu navegador no soporta videos HTML5.
+    </video>
+  </div>
+  <section class="carta">
+    <Div class="comidas">
+      <hr>
+      <a href="https://drive.google.com/file/d/1h0DTsMtjXO_I81OefdspbfO3m-O9tSYj/view?usp=share_link">
+        <h1>Carta Comidas </h1>
+        <h2>Descarga Carta Comidas</h2>
+        <img class="QR" src="../assets/media/icons/QR_Carta_Comidas.png" width="200px" height="200px" ;>
+      </a>
+      <object data="../assets/media/pdf/Carta&Comidas.pdf" type="application/pdf" width="420px" height="630px">
+        <p>No es posible mostrar el PDF.</p>
+      </object>
+      <!-- <embed src="../assets/media/pdf/Carta&Comidas.pdf" type="application/pdf" width="420px" height="630"> -->
+      <hr>
+    </Div>
+    <Div class="tragos">
+      <hr>
+      <a href="https://drive.google.com/file/d/1OO7gwZwp_Fz79eU9fs2SrAzY_P9D9aAm/view?usp=share_link">
+        <h1>Carta Tragos y Bebidas </h1>
+        <h2>Descarga Carta Tragos & Bebidas</h2>
+        <img class="QR" src="../assets/media/icons/QR_Carta_Tragos.png" width="200px" height="200px" ;>
+      </a>
+      <iframe src="../assets/media/pdf/Tragos&Bebidas.pdf" width="420px" height="630px">
+        <p>No es posible mostrar el PDF.</p>
+      </iframe>
+      <!--  <embed src="../assets/media/pdf/Tragos&Bebidas.pdf" type="application/pdf" width="420px" height="630">  -->
+      <hr>
+    </Div>
+  </section>
+  <!--  Cartel Widget Compras Transparente TADA -->
+  <section style="padding: 0px;" id="block-abipacowidget" class="block block-ab-widget-paco clearfix">
+    <div class="widget left_bottom mobile tablet desktop" style="width: 220px; height: 450px; background: transparent;">
+      <!-- Añadir Visibilidad-->
+      <div class="widget_background"
+        style="background:transparent;background-image:url(../assets/media/images/WhatsApp\ Image\ 2023-07-26\ at\ 3.37.20\ PM.jpeg); background-size: 25px 50px; border-radius: 16px;">
+        <div class="widget_content">
+          <div class="widget_close">
+            <a class="widget_close--btn"
+              data-close="&quot;event&quot;: &quot;GAEvent&quot;,&quot;event_category&quot;: &quot;Content&quot;,&quot;event_action&quot;: &quot;button&quot;,&quot;event_label&quot;: &quot;Close&quot;,&quot;interaction&quot;:&quot;true&quot;,&quot;component_name&quot;: &quot;close_widget&quot;,&quot;element_text&quot;: &quot;Cerrar&quot;"
+              style="background: #aeadad;" data-hover="#ffcc00">
+              <img src="../assets/media/icons/Close.png" title="Cerrar">
+            </a>
+          </div>
+          <div class="widget_head" style="background-color: #000000;  height: 50px;">
+            <img src="../assets/media/icons/tada encabezado.jpeg">
+          </div>
+          <div class="widget_body" style="margin: 20px;">
+            <div class="widget_body--content">
+              <div class="body_content--text center" style="margin-bottom: 1rem;">
+                <p class="body--text" data-font="../assets/media/fonts/Montserrat-Black.ttf"
+                  style="color: #ffffff; font-size: 18px; text-transform: none">Compra tus cervezas frías, rápido y a
+                  precios mágicos</p>
+              </div>
+              <div>
+                <img class="QR" src="../assets/media/icons/QR_Compras.png"
+                  style="background:transparent; padding: 5px 20px 5px 5px;" width="200" height="200" ;>
+              </div>
+              <div class="body_content--btn" style="margin-bottom: 0rem;">
+                <a href="../pages/market.html" target="_blank" class="body_btn--a"
+                  data-value="&quot;event&quot;: &quot;GAEvent&quot;,&quot;event_category&quot;: &quot;Content&quot;,&quot;event_action&quot;: &quot;button&quot;,&quot;event_label&quot;: &quot;widget_tada&quot;,&quot;interaction&quot;:&quot;true&quot;,&quot;component_name&quot;: &quot;btn_comprar_widget_tada&quot;,&quot;element_text&quot;: &quot;comprar&quot;,&quot;campaign_description&quot;: &quot;Widget_collection_Cerveza_Modelo&#039;&quot;"
+                  data-font="../assets/media/fonts/Montserrat-ExtraBold.ttf" data-hover="#bdbcbc" data-color="#000000"
+                  style="width: 100px; height: 35px; background: #ffcc00; color: #000000; font-size: 16px; border-radius: 14px;text-transform: uppercase;">¡COMPRAR!</a>
+              </div>
+            </div>
+          </div>
+          <div class="widget_footer" style="background:transparent;height: auto;">
+            <img src="../assets/media/images/Vive-responsable.png">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer de la página -->
+  <footer id="contacto">
+    <div class="contenedor footer-content">
+      <div class="contact-us">
+        <h2 class="brand">Cervisia</h2>
+        <p>La mejor cerveceria en la actualidad</p>
+        <!-- Pie de Pagina Agregar Participantes del Grupo -->
+        <p>&copy; 2023 Cervecería Cervisia. Todos los derechos reservados a <br>Grp24 - Federico Ponce - Tear Axel -
+          José Moisés Céspedes Gutiérrez - Chol Gastón .</p>
+      </div>
+      <div class="social-media">
+        <a href="" class="social-media-icon">
+          <i class='bx bxl-facebook'></i>
+        </a>
+        <a href="" class="social-media-icon">
+          <i class='bx bxl-twitter'></i>
+        </a>
+        <a href="" class="social-media-icon">
+          <i class='bx bxl-instagram'></i>
+        </a>
+      </div>
+    </div>
+    <div class="line"></div>
+  </footer>
+  <script src="../assets/js/popup.js"></script>
+</body>
+
+</html>
