@@ -95,7 +95,7 @@ img {
     background-repeat: no-repeat;
     background-size: cover;
     background-clip: border-box;
-    background-image: url("../imgs/fire.webp");
+    background-image: url("../media/fire.webp");
 }
 
 .bg2 {
@@ -103,7 +103,7 @@ img {
     background-repeat: no-repeat;
     background-size: cover;
     background-clip: border-box;
-    background-image: url("../imgs/landing.webp");
+    background-image: url("../media/landing.webp");
 }
 
 .up {

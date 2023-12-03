@@ -1,9 +1,9 @@
 let sector = {
     template: `
-    <section class="cuarto_sector" id="vinoteca" v-if= "value == 'VINOTECA' ">
+    <section class="cuarto_sector" id="cervezeria" v-if= "value == 'CERVEZERIA' ">
     <div class="section_data">
         <div>
-        <h1>Wines</h1>
+        <h1>Beers</h1>
         <input type='text' placeholder='ingrese a partir de que rating desea ver' v-model='rating'>
         <button @click="filterData(rating)">Filter Data</button>
         <button @click="fetchDataAxios">Data Axios</button>
@@ -18,23 +18,23 @@ let sector = {
                 <thead>
                     <tr>
                     <th>Id</th>
-                    <th>Winery</th>
-                    <th>Wine</th>
+                    <th>Brewery</th>
+                    <th>Beer</th>
                     <th>Average</th>
                     <th>Reviews</th>
                     <th>Location</th>
                     <th>Image</th>
                     </tr>
                 </thead>
-                <tbody v-for="wine of wines">
+                <tbody v-for="beer of beers">
                     <tr>
-                    <td>{{wine.id}}</td>
-                    <td>{{wine.winery}}</td>
-                    <td>{{wine.wine}}</td>
-                    <td>{{wine.rating.average}}</td>
-                    <td>{{wine.rating.reviews}}</td>
-                    <td>{{wine.location}}</td>
-                    <td><img :src="wine.image" :alt="wine.wine"></td>
+                    <td>{{beer.id}}</td>
+                    <td>{{beer.Brewery}}</td>
+                    <td>{{beer.beer}}</td>
+                    <td>{{beer.rating.average}}</td>
+                    <td>{{beer.rating.reviews}}</td>
+                    <td>{{beer.location}}</td>
+                    <td><img :src="beer.image" :alt="beer.beer"></td>
                     </tr>
                 </tbody>
             </table>
@@ -49,7 +49,7 @@ let sector = {
 
     data: function () {
         return {
-            url: "https://api.sampleapis.com/wines/reds",
+            url: "https://api.sampleapis.com/beer/reds",
             wines: [],
             error: false,
             nroerror: 0,
@@ -65,7 +65,7 @@ let sector = {
             fetch(url)
                 .then((response) => response.json())
                 .then((data) => {
-                    this.wines = data;
+                    this.beer = data;
                     this.cargando = false;
                 })
                 .catch((error) => {
@@ -77,7 +77,7 @@ let sector = {
 
         filterData: function (rating) {
             console.log(rating);
-            this.wines = this.wines.filter((e) => e.rating.average > rating);
+            this.beers = this.beers.filter((e) => e.rating.average > rating);
         },
         async fetchDataAxios() {
             let res = await axios(this.url);
@@ -101,7 +101,7 @@ let app = {
                 "GITHUB-GIT",
                 "POWER BI",
             ],
-            intro: "Mi nombre es Anderson, soy docente , programador y analista de datos",
+            intro: "Mi nombre es Abcdefghi, soy abcdfghi , abcdefghi y abcdfghi",
             value: null,
         };
     },
