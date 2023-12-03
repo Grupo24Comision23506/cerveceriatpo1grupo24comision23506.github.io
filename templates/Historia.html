@@ -12,14 +12,14 @@
      <!-- DESCRIPTION -->
      <meta name="description" content="Formulario de Incripcion">
     <!-- TITTLE -->
-    <title>Historia de Cervesia</title>
+    {% block title %}<title>Historia de Cervesia</title>{% endblock %}
     <!-- STYLES -->
     <!-- Estilo Genera para toda la Pagina -->
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <!-- Estilo para Historia -->
-    <link rel="stylesheet" href="/assets/css/estilo-historia.css">
+    <link rel="stylesheet" href="{% static 'css/estilo-historia.css' %}">
     <!-- ICONS FONT & ICONS -->
-    <!-- <script src="../assets/js/Tarjetas.js"></script> -->
+    <!-- <script src="{% static 'js/Tarjetas.js' %}"></script> -->
     <!-- ICONS FONT & ICONS -->
     <script src="https://kit.fontawesome.com/73f851add2.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,26 +30,28 @@
 <body>
   <!-- Header de la página -->
   <!-- Menu horizontal paginas-->
+  {% block sidebar %}
   <header class="header">
     <div class="container logo-nav-container">
-      <a href="../index.html#promo" title="Cervecería Cervisia" class="logo">
-        <img src="../assets/media/icons/cerveceria-cervesia-dorado-unscreen.gif" width="60px" height="60px"  class="logo">
-      </a>
+      <a href="#bienvenido" title="Cervecería Cervisia" class="logo">
+        <img src="{% static './media/icons/cerveceria-cervesia-dorado-unscreen.gif' %}" width="60px" height="60px" class="logo">
+      </a> 
       <nav class="navigation">
         <ul>
-          <li><a href="../index.html#bienvenido">Inicio</a></li>
-          <li><a href="../index.html#promo">Promociones</a></li>
-          <li><a href="../pages/Formulario.html">Contacto</a></li>
-          <li><a href="../pages/market.html">Market</a></li>
-          <li><a href="../pages/Cartas.html">Cartas</a></li>
-          <li><a href="../pages/Historia.html">Historia</a></li>
-          <button id="menu-button" href="../index.html#bienvenido" style="background:transparent;height: auto;">
-            <img src="../assets/media/images/hamburguesa.svg" alt="Menú">
+          <li><a href="#bienvenido">Inicio</a></li>
+          <li><a href="#promo">Promociones</a></li>
+          <li><a href="{% url 'Formulario.html' %}">Contacto</a></li>
+          <li><a href="{% url 'market.html' %}">Market</a></li>
+          <li><a href="{% url 'Cartas.html' %}">Cartas</a></li>
+          <li><a href="{% url 'Historia.html' %}">Historia</a></li>
+          <button id="menu-button" href="#bienvenido" style="background:transparent; height:auto;">
+            <img src="{% static './media/images/hamburguesa.svg' %}" alt="Menú">
           </button>
         </ul>
       </nav>
     </div>
   </header>
+  {% endblock %}
   <!-- A partir de aqui toda la informacion de la Historia -->
   <div class="historia" style="padding-top: 10vh";>
     <div class="titulo">
@@ -57,24 +59,24 @@
     </div>
     <div class="image-container">
         <div class="image">
-            <img src="../assets/media/images/familia1.png" alt="Imagen 1">
+            <img src="{% static 'media/images/familia1.png' %}" alt="Imagen 1">
         </div>
         <div class="image">
-            <img src="../assets/media/images/fondo-hero3.jpeg" alt="Imagen 2">
+            <img src="{% static 'media/images/fondo-hero3.jpeg' %}" alt="Imagen 2">
             <div class="overlay">
                 <h2>Título de la Imagen 2</h2>
                 <p>Párrafo descriptivo de la Imagen 2.</p>
             </div>
         </div>
         <div class="image">
-            <img src="../assets/media/images/tradicional-2000x1000.jpg" alt="Imagen 3">
+            <img src="{% static 'media/images/tradicional-2000x1000.jpg' %}" alt="Imagen 3">
             <div class="overlay">
                 <h2>Título de la Imagen 3</h2>
                 <p>Párrafo descriptivo de la Imagen 3.</p>
             </div>
         </div>
         <div class="image">
-            <img src="../assets/media/images/R (1).jpeg" alt="Imagen 4">
+            <img src="{% static 'images/R (1).jpeg' %}" alt="Imagen 4">
             <div class="overlay">
               <h2>Título de la Imagen 4</h2>
               <p>Párrafo descriptivo de la Imagen 4.</p>
@@ -83,15 +85,15 @@
     
     <div class="image-slider">
         <div class="slider-image">
-            <img src="../assets/media/images/lupulo.jpg" alt="1">
+            <img src="{% static 'media/images/lupulo.jpg' %}" alt="1">
             <p>Lupulo</p>
         </div>
         <div class="slider-image">
-            <img src="../assets/media/images/cebada.jpg" alt="2">
+            <img src="{% static 'media/images/cebada.jpg' %}" alt="2">
             <p>Cebada</p>
         </div>
         <div class="slider-image">
-            <img src="../assets/media/images/maiz.jpg" alt="3">
+            <img src="{% static 'media/images/maiz.jpg' %}" alt="3">
             <p>Maiz</p>
         </div>
     </div>
@@ -145,8 +147,8 @@
     <br>
     <!-- Video de Fondo -->
     <div class="video-background">
-    <video autoplay muted loop id="video" poster="../assets/media/images/fondo.png">
-      <source src="../assets/media/video/Vaso_Espuma.mp4" type="video/mp4">
+    <video autoplay muted loop id="video" poster="{% static 'media/images/fondo.png' %}">
+      <source src="{% static 'media/video/Vaso_Espuma.mp4' %}" type="video/mp4">
        Tu navegador no soporta videos HTML5.
     </video>    
     <h1 class="subtitulo"> Y por todo eso refréscate con el delicioso sabor de <br>Nuestra Cerveza</h1>
@@ -180,8 +182,7 @@
         <h2 class="brand">Cervisia</h2>
         <p>La mejor cerveceria en la actualidad</p>
         <!-- Pie de Pagina Agregar Participantes del Grupo -->
-        <p>&copy; 2023 Cervecería Cervisia. Todos los derechos reservados a <br>Grp24 - Federico Ponce - Tear Axel -
-          José Moisés Céspedes Gutiérrez - Chol Gastón .</p>
+        <p>&copy; 2023 Cervecería Cervisia. Todos los derechos reservados a <br>Grp24 - Federico Ponce - Te Chol Gastón .</p>
       </div>
       <div class="social-media">
         <a href="" class="social-media-icon">

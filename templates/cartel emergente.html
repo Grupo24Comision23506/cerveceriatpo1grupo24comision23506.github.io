@@ -5,8 +5,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../assets/css/styles-cartel-emergente.css">
-  <title>Ofertas</title>
+  <link rel="stylesheet" href="{% static 'css/styles-cartel-emergente.css' %}">
+  {% block title %}<title>Ofertas</title>{% endblock %}
 </head>
 <body>
 <section class="fondo-oferta">
@@ -26,8 +26,8 @@
     </div>
   </div>
    <div id="fondo-oferta" class="fondo-oferta" style="z-index: -3; opacity: 80%;">
-    <video autoplay loop muted poster="../assets/media/images/Mask Group2 (1).jpg">
-      <source src="../assets/media/video/Brindis_Market1.mp4" type="video/mp4">
+    <video autoplay loop muted poster="{% static 'media/images/Mask Group2 (1).jpg' %}">
+      <source src="{% static 'media/video/Brindis_Market1.mp4' %}" type="video/mp4">
       <!-- Agrega más <source> elementos para otros formatos de video -->
       Tu navegador no soporta la etiqueta de video.
     </video>

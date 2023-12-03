@@ -1,66 +1,38 @@
-{% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="{% static './img/favicon.png' %}" type="image/x-icon">
-    <link rel="stylesheet" href="{% static './css/style.css' %}">
-    <title>API</title>
+
+  {% block title %}<title>Local Library</title>{% endblock %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- Add additional CSS in static file -->
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 
 <body>
-    <div class="container">
-        <div class="container__item landing-page-container">
-            <div class="content__wrapper">
 
-                <header class="header">
-                    <div class="menu-icon header__item">
-                        <span class="menu-icon__line"></span>
-                    </div>
+  <div class="container-fluid">
 
-                    <h1 class="heading header__item">Products API</h1>
-
-                </header>
-
-                <p class="coords"></p>
-
-                <div class="ellipses-container">
-
-                    <h2 class="greeting">API LANDING PAGE</h2>
-
-                    <div class="ellipses ellipses__outer--thin">
-
-                        <div class="ellipses ellipses__orbit"></div>
-
-                    </div>
-
-                    <div class="ellipses ellipses__outer--thick"></div>
-                </div>
-
-                <div class="scroller">
-                    <p class="page-title">
-                        <a href="admin/" class="admin">
-                            Andru API ADMIN
-                        </a>
-                    </p>
-
-                    <div class="timeline">
-                        <span class="timeline__unit"></span>
-                        <span class="timeline__unit timeline__unit--active"></span>
-                        <span class="timeline__unit"></span>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
+    <div class="row">
+      <div class="col-sm-2">
+      {% block sidebar %}
+      <ul class="sidebar-nav">
+          <li><a href="{% url 'index' %}">Home</a></li>
+          <li><a href="">All books</a></li>
+          <li><a href="">All authors</a></li>
+      </ul>
+     {% endblock %}
+      </div>
+      <div class="col-sm-10 ">
+      {% block content %}{% endblock %}
+      </div>
     </div>
 
-
+  </div>
 </body>
-<script src="{% static './js/index.js' %}"></script>
-
 </html>
