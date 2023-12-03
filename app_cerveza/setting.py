@@ -23,31 +23,33 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-+$j7v#z&s@*v##%#s=5s&jab(nn2q$emjklxlv)neb^pzo#onr'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 1
+DEBUG = False
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["grupo24.pythonanywhere.com"]
 
 
-APPS = [
-    "app_cerveza"
-]
+# APPS = [
+#     "app_cerveza"
+# ]
 
-EXTERNALS = [
-    "rest_framework",
-]
+# EXTERNALS = [
+#     "rest_framework",
+# ]
 
 INSTALLED_APPS = [
+    'app_cerveza',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
 ]
 
 
-INSTALLED_APPS += APPS
-INSTALLED_APPS += EXTERNALS
+# INSTALLED_APPS += APPS
+# INSTALLED_APPS += EXTERNALS
 
 
 MIDDLEWARE = [
@@ -61,7 +63,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'cerveza.urls'
+ROOT_URLCONF = 'app_cerveza.urls'
 
 TEMPLATES = [
     {
@@ -79,7 +81,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'cerveza.wsgi.application'
+# WSGI_APPLICATION = 'app_cerveza.wsgi.application'
 
 
 # Database
@@ -90,7 +92,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
-} 
+}
 
 
 # USUARIO_PYTHON_ANYWHERE     = "grupo24"
@@ -102,7 +104,7 @@ DATABASES = {
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': MYSQL_DATABASE , 
+#         'NAME': MYSQL_DATABASE ,
 #         'USER': USUARIO_PYTHON_ANYWHERE,
 #         'PASSWORD': PASSWORD_MYSQL,
 #         'HOST': MYSQL_PYTHON_ANYWHERE_HOST,
@@ -149,8 +151,8 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-STATICFILES_DIRS = [
-    BASE_DIR / "staticfiles"]
+# STATICFILES_DIRS = [
+#     BASE_DIR / "staticfiles"]
 
 STATIC_ROOT = BASE_DIR / "static/"
 

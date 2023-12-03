@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views import View
 
@@ -13,13 +12,17 @@ from .models import Cerveza
 
 
 class CervezasBaseView(View):
-    template_name = 'Cerveza.html'
+    template_name = 'cervezas.html'
     model = Cerveza
     fields = '__all__'
-    success_url = reverse_lazy('cerveza:all')
+    success_url = reverse_lazy('cervezas:all')
+
+class Cervezas(CervezasBaseView, DetailView):
+    template_name = "cervezas.html"
     
 
 class CervezasListView(CervezasBaseView,ListView):
+    template_name = "cervezas.html"
     """
     ESTO ME PERMITE CREAR UNA VISTA CON LAS CERVEZAS
     """
