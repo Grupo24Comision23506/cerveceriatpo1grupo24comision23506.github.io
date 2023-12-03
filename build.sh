@@ -10,6 +10,6 @@ python manage.py makemigrations
 python manage.py migrate
 
 DJANGO_SUPERUSER_USERNAME=Grupo24 \
-DJANGO_SUPERUSER_PASSWORD=grupo24full \
+DJANGO_SUPERUSER_PASSWORD=fullgrupo24 \
 DJANGO_SUPERUSER_EMAIL="fullstackgrupo24@gmail.com" \
 python manage.py createsuperuser --noinput
