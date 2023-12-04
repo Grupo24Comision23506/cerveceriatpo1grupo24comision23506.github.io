@@ -39,7 +39,7 @@
     <div class="container logo-nav-container">
       <a href="#bienvenido" title="Cervecería Cervisia" class="logo">
         <img src="{% static './media/icons/cerveceria-cervesia-dorado-unscreen.gif' %}" width="60px" height="60px" class="logo">
-      </a> 
+      </a>
       <nav class="navigation">
         <ul>
           <li><a href="#bienvenido">Inicio</a></li>
@@ -56,6 +56,7 @@
     </div>
   </header>
   {% endblock %}
+  {% block content %}{% endblock %}
   <div class="line"></div>
   <div class="video-background" style="height:100vh; ">
     <!-- <video autoplay muted loop id="video" poster="../assets/media/images/fondo.png">
@@ -126,7 +127,6 @@
         </div>
       </div>
     </section>
-    {% block content %}{% endblock %}
     <!-- Footer de la página -->
     <footer id="contacto">
       <div class="contenedor footer-content">

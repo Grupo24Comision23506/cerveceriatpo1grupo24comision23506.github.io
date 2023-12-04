@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -22,32 +22,40 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-+$j7v#z&s@*v##%#s=5s&jab(nn2q$emjklxlv)neb^pzo#onr'
 
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOWED_ORIGINS = [
+    "*",
+]
+
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 1
+DEBUG = False
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["grupo24.pythonanywhere.com"]
 
 
-APPS = [
-    "app_cerveza"
-]
+# APPS = [
+#     "app_cerveza"
+# ]
 
-EXTERNALS = [
-    "rest_framework",
-]
+# EXTERNALS = [
+#     "rest_framework",
+# ]
 
 INSTALLED_APPS = [
+    'app_cerveza',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'corsheaders',
+    'rest_framework',
 ]
 
 
-INSTALLED_APPS += APPS
-INSTALLED_APPS += EXTERNALS
+# INSTALLED_APPS += APPS
+# INSTALLED_APPS += EXTERNALS
 
 
 MIDDLEWARE = [
@@ -57,16 +65,18 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'cerveza.urls'
+ROOT_URLCONF = 'app_cerveza.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / "templates"],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -79,7 +89,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'cerveza.wsgi.application'
+# WSGI_APPLICATION = 'app_cerveza.wsgi.application'
 
 
 # Database
@@ -90,7 +100,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
-} 
+}
 
 
 # USUARIO_PYTHON_ANYWHERE     = "grupo24"
@@ -102,7 +112,7 @@ DATABASES = {
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': MYSQL_DATABASE , 
+#         'NAME': MYSQL_DATABASE ,
 #         'USER': USUARIO_PYTHON_ANYWHERE,
 #         'PASSWORD': PASSWORD_MYSQL,
 #         'HOST': MYSQL_PYTHON_ANYWHERE_HOST,
@@ -149,8 +159,8 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-STATICFILES_DIRS = [
-    BASE_DIR / "staticfiles"]
+# STATICFILES_DIRS = [
+#     BASE_DIR / "staticfiles"]
 
 STATIC_ROOT = BASE_DIR / "static/"
 
