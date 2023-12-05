@@ -81,7 +81,7 @@ TEMPLATES = [
     },
 ]
 
-# WSGI_APPLICATION = 'app_cerveza.wsgi.application'
+WSGI_APPLICATION = 'app_cerveza.wsgi.application'
 
 
 # Database
@@ -93,7 +93,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 # USUARIO_PYTHON_ANYWHERE     = "grupo24"
 # PASSWORD_MYSQL              = ""
