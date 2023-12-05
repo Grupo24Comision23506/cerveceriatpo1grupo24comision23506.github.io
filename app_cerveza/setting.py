@@ -97,7 +97,7 @@ DATABASES = {
 # USUARIO_PYTHON_ANYWHERE     = "grupo24"
 # PASSWORD_MYSQL              = ""
 # MYSQL_PYTHON_ANYWHERE_HOST  = USUARIO_PYTHON_ANYWHERE+".mysql.pythonanywhere-services.com"
-# MYSQL_DATABASE              = USUARIO_PYTHON_ANYWHERE+"$cerveza"
+# MYSQL_DATABASE              = USUARIO_PYTHON_ANYWHERE+"$Cerveza"
 
 
 # DATABASES = {
