@@ -15,9 +15,9 @@
     {% block title %}<title>Historia de Cervesia</title>{% endblock %}
     <!-- STYLES -->
     <!-- Estilo Genera para toda la Pagina -->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static './css/style.css' %}">
     <!-- Estilo para Historia -->
-    <link rel="stylesheet" href="{% static 'css/estilo-historia.css' %}">
+    <link rel="stylesheet" href="{% static './css/estilo-historia.css' %}">
     <!-- ICONS FONT & ICONS -->
     <!-- <script src="{% static 'js/Tarjetas.js' %}"></script> -->
     <!-- ICONS FONT & ICONS -->
@@ -59,24 +59,24 @@
     </div>
     <div class="image-container">
         <div class="image">
-            <img src="{% static 'media/images/familia1.png' %}" alt="Imagen 1">
+            <img src="{% static './media/images/familia1.png' %}" alt="Imagen 1">
         </div>
         <div class="image">
-            <img src="{% static 'media/images/fondo-hero3.jpeg' %}" alt="Imagen 2">
+            <img src="{% static './media/images/fondo-hero3.jpeg' %}" alt="Imagen 2">
             <div class="overlay">
                 <h2>Título de la Imagen 2</h2>
                 <p>Párrafo descriptivo de la Imagen 2.</p>
             </div>
         </div>
         <div class="image">
-            <img src="{% static 'media/images/tradicional-2000x1000.jpg' %}" alt="Imagen 3">
+            <img src="{% static './media/images/tradicional-2000x1000.jpg' %}" alt="Imagen 3">
             <div class="overlay">
                 <h2>Título de la Imagen 3</h2>
                 <p>Párrafo descriptivo de la Imagen 3.</p>
             </div>
         </div>
         <div class="image">
-            <img src="{% static 'images/R (1).jpeg' %}" alt="Imagen 4">
+            <img src="{% static './images/R (1).jpeg' %}" alt="Imagen 4">
             <div class="overlay">
               <h2>Título de la Imagen 4</h2>
               <p>Párrafo descriptivo de la Imagen 4.</p>
@@ -85,15 +85,15 @@
     
     <div class="image-slider">
         <div class="slider-image">
-            <img src="{% static 'media/images/lupulo.jpg' %}" alt="1">
+            <img src="{% static './media/images/lupulo.jpg' %}" alt="1">
             <p>Lupulo</p>
         </div>
         <div class="slider-image">
-            <img src="{% static 'media/images/cebada.jpg' %}" alt="2">
+            <img src="{% static './media/images/cebada.jpg' %}" alt="2">
             <p>Cebada</p>
         </div>
         <div class="slider-image">
-            <img src="{% static 'media/images/maiz.jpg' %}" alt="3">
+            <img src="{% static './media/images/maiz.jpg' %}" alt="3">
             <p>Maiz</p>
         </div>
     </div>
@@ -147,8 +147,8 @@
     <br>
     <!-- Video de Fondo -->
     <div class="video-background">
-    <video autoplay muted loop id="video" poster="{% static 'media/images/fondo.png' %}">
-      <source src="{% static 'media/video/Vaso_Espuma.mp4' %}" type="video/mp4">
+    <video autoplay muted loop id="video" poster="{% static './media/images/fondo.png' %}">
+      <source src="{% static './media/video/Vaso_Espuma.mp4' %}" type="video/mp4">
        Tu navegador no soporta videos HTML5.
     </video>    
     <h1 class="subtitulo"> Y por todo eso refréscate con el delicioso sabor de <br>Nuestra Cerveza</h1>
