@@ -1,6 +1,6 @@
-from sre_constants import ANY_ALL
+#from sre_constants import ANY_ALL
 from django.contrib import admin
-from .models import Cerveza; ANY_ALL
+from .models import Cerveza
 
 # Register your models here.
 @admin.register(Cerveza)

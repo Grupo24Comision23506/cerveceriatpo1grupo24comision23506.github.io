@@ -26,7 +26,6 @@ EXTERNALS = [
 
 INSTALLED_APPS = [
     'app_cerveza',
-    'api-cerveza',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -55,7 +54,7 @@ ROOT_URLCONF = 'app_cerveza.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / "templates"],
+        'DIRS': ["templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -90,7 +89,7 @@ MYSQL_DATABASE              = USUARIO_PYTHON_ANYWHERE+"$Cerveza"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': MYSQL_DATABASE ,
+        'NAME': grupo24$default ,
         'USER': grupo24,
         'PASSWORD': P@ssw0rd$ecur@G00gl3,
         'HOST': grupo24.mysql.pythonanywhere-services.com,
