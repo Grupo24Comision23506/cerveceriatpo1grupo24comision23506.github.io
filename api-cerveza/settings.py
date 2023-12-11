@@ -17,7 +17,7 @@ ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
-CUSTOM_APPS = ["app_products"]
+CUSTOM_APPS = ["app_cerveza"]
 
 EXTRA_APPS = ["rest_framework", "rest_framework_simplejwt",    "whitenoise.runserver_nostatic"]
 
@@ -54,7 +54,7 @@ ROOT_URLCONF = "products_api.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [BASE_DIR / "templates"],
+        "DIRS": [BASE_DIR /"templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [

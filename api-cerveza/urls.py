@@ -16,7 +16,7 @@ urlpatterns = [
     path("admin/", admin.site.urls),
         path("", IndexPage.as_view(), name="index"),
 
-    path("api/", include("app_products.urls")),
+    path("api/", include("app_cerveza.urls")),
 ]
 
 url_jwt_token = [
