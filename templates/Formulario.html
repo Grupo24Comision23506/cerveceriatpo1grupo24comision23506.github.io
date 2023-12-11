@@ -16,10 +16,10 @@
     {% block title %}<title> Contactenos | Formulario</title>{% endblock %}
     <!-- STYLES -->
     <!-- Estilo Genera para toda la Pagina -->
-    <link rel="stylesheet" href=".{% static 'css/style.css' %}">
+    <link rel="stylesheet" href=".{% static './css/style.css' %}">
     <!-- Estilo Formulario -->
-    <link rel="stylesheet" href="{% static 'css/Formulario.css' %}">
-    <link rel="stylesheet" href="{% static 'css/Estilo-widget.css' %}">
+    <link rel="stylesheet" href="{% static './css/Formulario.css' %}">
+    <link rel="stylesheet" href="{% static './css/Estilo-widget.css' %}">
     <!-- ICONS FONT & ICONS -->
     <script src="https://kit.fontawesome.com/73f851add2.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,7 +35,7 @@
   <header class="header">
     <div class="container logo-nav-container">
       <a href="#bienvenido" title="Cervecería Cervisia" class="logo">
-        <img src="{% static 'media/icons/cerveceria-cervesia-dorado-unscreen.gif' %}" width="60px" height="60px" class="logo">
+        <img src="{% static './media/icons/cerveceria-cervesia-dorado-unscreen.gif' %}" width="60px" height="60px" class="logo">
       </a> 
       <nav class="navigation">
         <ul>
@@ -46,7 +46,7 @@
           <li><a href="{% url 'Cartas.html' %}">Cartas</a></li>
           <li><a href="{% url 'Historia.html' %}">Historia</a></li>
           <button id="menu-button" href="#bienvenido" style="background:transparent; height:auto;">
-            <img src="{% static 'media/images/hamburguesa.svg' %}" alt="Menú">
+            <img src="{% static './media/images/hamburguesa.svg' %}" alt="Menú">
           </button>
         </ul>
       </nav>
@@ -55,8 +55,8 @@
   {% endblock %}
     <div class="line"></div>
     <div class="video-background" style="height: 1800px;;width: 100vw">;
-        <video autoplay muted loop id="video" poster="{% static 'media/images/fondo.png' %}">
-            <source src="{% static 'media/video/Brindis_Market2.mp4' %}" type="video/mp4">
+        <video autoplay muted loop id="video" poster="{% static './media/images/fondo.png' %}">
+            <source src="{% static './media/video/Brindis_Market2.mp4' %}" type="video/mp4">
             Tu navegador no soporta videos HTML5.
         </video>
         
@@ -235,11 +235,11 @@
                             <a class="widget_close--btn"
                                 data-close="&quot;event&quot;: &quot;GAEvent&quot;,&quot;event_category&quot;: &quot;Content&quot;,&quot;event_action&quot;: &quot;button&quot;,&quot;event_label&quot;: &quot;Close&quot;,&quot;interaction&quot;:&quot;true&quot;,&quot;component_name&quot;: &quot;close_widget&quot;,&quot;element_text&quot;: &quot;Cerrar&quot;"
                                 style="background: #aeadad;" data-hover="#ffcc00">
-                                <img src="{% static 'media/icons/Close.png' %}" title="Cerrar">
+                                <img src="{% static './media/icons/Close.png' %}" title="Cerrar">
                             </a>
                         </div>
                         <div class="widget_head" style="background-color: #000000;  height: 50px;">
-                            <img src="{% static 'media/icons/tada encabezado.jpeg' %}">
+                            <img src="{% static './media/icons/tada encabezado.jpeg' %}">
                         </div>
                         <div class="widget_body" style="margin: 20px;">
                             <div class="widget_body--content">
@@ -250,21 +250,21 @@
                                         precios mágicos</p>
                                 </div>
                                 <div>
-                                    <img class="QR" src="{% static 'media/icons/QR_Compras.png' %}"
+                                    <img class="QR" src="{% static './media/icons/QR_Compras.png' %}"
                                         style="background:transparent; padding: 5px 20px 5px 5px;" width="200"
                                         height="200" ;>
                                 </div>
                                 <div class="body_content--btn" style="margin-bottom: 0rem;">
                                     <a href="{% url 'market.html' %}" target="_blank" class="body_btn--a"
                                         data-value="&quot;event&quot;: &quot;GAEvent&quot;,&quot;event_category&quot;: &quot;Content&quot;,&quot;event_action&quot;: &quot;button&quot;,&quot;event_label&quot;: &quot;widget_tada&quot;,&quot;interaction&quot;:&quot;true&quot;,&quot;component_name&quot;: &quot;btn_comprar_widget_tada&quot;,&quot;element_text&quot;: &quot;comprar&quot;,&quot;campaign_description&quot;: &quot;Widget_collection_Cerveza_Modelo&#039;&quot;"
-                                        data-font="{% static 'media/fonts/Montserrat-ExtraBold.ttf' %}" data-hover="#bdbcbc"
+                                        data-font="{% static './media/fonts/Montserrat-ExtraBold.ttf' %}" data-hover="#bdbcbc"
                                         data-color="#000000"
                                         style="width: 100px; height: 35px; background: #ffcc00; color: #000000; font-size: 16px; border-radius: 14px;text-transform: uppercase;">¡COMPRAR!</a>
                                 </div>
                             </div>
                         </div>
                         <div class="widget_footer" style="background:transparent;height: auto;">
-                            <img src="{% static 'media/images/Vive-responsable.png' %}">
+                            <img src="{% static './media/images/Vive-responsable.png' %}">
                         </div>
                     </div>
                 </div>

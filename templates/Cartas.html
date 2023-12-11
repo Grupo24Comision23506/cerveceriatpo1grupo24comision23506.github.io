@@ -9,7 +9,7 @@
   <!-- IE-EDGE -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!-- TITTLE -->
-  <title>Carta Comidas y Carta Tragos & Bebidas </title>
+  {% block title %}<title>Carta Comidas y Carta Tragos & Bebidas</title>{% endblock %}
   <!-- STYLES -->
   <!-- Estilo Genera para toda la Pagina -->
   <link rel="stylesheet" href="{% static './css/style.css' %}">
@@ -22,13 +22,13 @@
 </head>
 
 <body>
-   <!-- Header de la página -->
+  <!-- Header de la página -->
   <!-- Menu horizontal paginas-->
   {% block sidebar %}
   <header class="header">
     <div class="container logo-nav-container">
       <a href="#bienvenido" title="Cervecería Cervisia" class="logo">
-        <img src="{% static 'media/icons/cerveceria-cervesia-dorado-unscreen.gif' %}" width="60px" height="60px" class="logo">
+        <img src="{% static './media/icons/cerveceria-cervesia-dorado-unscreen.gif' %}" width="60px" height="60px" class="logo">
       </a> 
       <nav class="navigation">
         <ul>
@@ -39,7 +39,7 @@
           <li><a href="{% url 'Cartas.html' %}">Cartas</a></li>
           <li><a href="{% url 'Historia.html' %}">Historia</a></li>
           <button id="menu-button" href="#bienvenido" style="background:transparent; height:auto;">
-            <img src="{% static 'media/images/hamburguesa.svg' %}" alt="Menú">
+            <img src="{% static './media/images/hamburguesa.svg' %}" alt="Menú">
           </button>
         </ul>
       </nav>
@@ -47,11 +47,11 @@
   </header>
   {% endblock %}
   <div class="line" style="padding: 2vmax;"></div>
-  <div class="video-background" style="height:100vh;  ">
-    <video autoplay muted loop id="video" poster="{% static 'media/images/fondo.png' %">
-      <source src="{% static 'media/video/Cerveza_Tirada2.mp4' %" type="video/mp4">
-      Tu navegador no soporta videos HTML5.
-    </video>
+  <div class="video-background" style="height:100vh;">
+      <video autoplay muted loop id="video" poster="{% static './media/images/fondo.png' %">
+       <source src="{% static './media/video/Cerveza_Tirada2.mp4' %" type="video/mp4">
+       Tu navegador no soporta videos HTML5.
+      </video>
   </div>
   <section class="carta">
     <Div class="comidas">
@@ -72,12 +72,12 @@
       <a href="https://drive.google.com/file/d/1OO7gwZwp_Fz79eU9fs2SrAzY_P9D9aAm/view?usp=share_link">
         <h1>Carta Tragos y Bebidas </h1>
         <h2>Descarga Carta Tragos & Bebidas</h2>
-        <img class="QR" src="{% static 'media/icons/QR_Carta_Tragos.png' %" width="200px" height="200px" ;>
+        <img class="QR" src="{% static './media/icons/QR_Carta_Tragos.png' %" width="200px" height="200px" ;>
       </a>
-      <iframe src="{% static 'media/pdf/Tragos&Bebidas.pdf' %" width="420px" height="630px">
+      <iframe src="{% static './media/pdf/Tragos&Bebidas.pdf' %" width="420px" height="630px">
         <p>No es posible mostrar el PDF.</p>
       </iframe>
-      <!--  <embed src="{% static 'media/pdf/Tragos&Bebidas.pdf' %" type="application/pdf" width="420px" height="630">  -->
+      <!--  <embed src="{% static './media/pdf/Tragos&Bebidas.pdf' %" type="application/pdf" width="420px" height="630">  -->
       <hr>
     </Div>
   </section>
@@ -86,13 +86,13 @@
     <div class="widget left_bottom mobile tablet desktop" style="width: 220px; height: 450px; background: transparent;">
       <!-- Añadir Visibilidad-->
       <div class="widget_background"
-        style="background:transparent;background-image:url({% static 'media/images/WhatsApp\ Image\ 2023-07-26\ at\ 3.37.20\ PM.jpeg' %); background-size: 25px 50px; border-radius: 16px;">
+        style="background:transparent;background-image:url({% static './media/images/WhatsApp\ Image\ 2023-07-26\ at\ 3.37.20\ PM.jpeg' %); background-size: 25px 50px; border-radius: 16px;">
         <div class="widget_content">
           <div class="widget_close">
             <a class="widget_close--btn"
               data-close="&quot;event&quot;: &quot;GAEvent&quot;,&quot;event_category&quot;: &quot;Content&quot;,&quot;event_action&quot;: &quot;button&quot;,&quot;event_label&quot;: &quot;Close&quot;,&quot;interaction&quot;:&quot;true&quot;,&quot;component_name&quot;: &quot;close_widget&quot;,&quot;element_text&quot;: &quot;Cerrar&quot;"
               style="background: #aeadad;" data-hover="#ffcc00">
-              <img src="{% static 'media/icons/Close.png' %" title="Cerrar">
+              <img src="{% static './media/icons/Close.png' %" title="Cerrar">
             </a>
           </div>
           <div class="widget_head" style="background-color: #000000;  height: 50px;">

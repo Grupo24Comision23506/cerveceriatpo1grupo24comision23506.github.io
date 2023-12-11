@@ -15,9 +15,9 @@
   <!-- TITTLE -->
   {% block title %}<title>Los Mejores Precios del Mercado - Market Cervesia</title>{% endblock %}
   <!-- Estilo Genera para toda la Pagina -->
-  <link rel="stylesheet" href="../assets/css/style.css">
-  <link rel="stylesheet" href="../assets/css/market.css">
-  <link rel="stylesheet" href="../assets/css/Estilo-widget.css">
+  <link rel="stylesheet" href="{% static './css/style.css' %}">
+  <link rel="stylesheet" href="{% static './css/market.css' %}">
+  <link rel="stylesheet" href="{% static './css/Estilo-widget.css' %}">
   <!-- Links del CSS y fuentes -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
   <link href='https://unpkg.com/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
@@ -58,14 +58,7 @@
   {% endblock %}
   {% block content %}{% endblock %}
   <div class="line"></div>
-  <div class="video-background" style="height:100vh; ">
-    <!-- <video autoplay muted loop id="video" poster="../assets/media/images/fondo.png">
-      <source src="../assets/media/video/Brindis_Market2.mp4" type="video/mp4">
-      Tu navegador no soporta videos HTML5.
-    </video> -->
-    <!-- <div class="line"></div> -->
-    <!-- Body de la página -->
-    <div class="contenedor">
+   <div class="contenedor">
       <div class="filtro">
         <hr>
         <form id="form">
@@ -89,39 +82,39 @@
         style="width: 220px; height: 450px; background: transparent;">
         <!-- Añadir Visibilidad-->
         <div class="widget_background"
-          style="background:transparent;background-image:url({% static 'media/images/WhatsApp\ Image\ 2023-07-26\ at\ 3.37.20\ PM.jpeg' %); background-size: 25px 50px; border-radius: 16px;">
+          style="background:transparent;background-image:url({% static './media/images/WhatsApp\ Image\ 2023-07-26\ at\ 3.37.20\ PM.jpeg' %); background-size: 25px 50px; border-radius: 16px;">
           <div class="widget_content">
             <div class="widget_close">
               <a class="widget_close--btn"
                 data-close="&quot;event&quot;: &quot;GAEvent&quot;,&quot;event_category&quot;: &quot;Content&quot;,&quot;event_action&quot;: &quot;button&quot;,&quot;event_label&quot;: &quot;Close&quot;,&quot;interaction&quot;:&quot;true&quot;,&quot;component_name&quot;: &quot;close_widget&quot;,&quot;element_text&quot;: &quot;Cerrar&quot;"
                 style="background: #aeadad;" data-hover="#ffcc00">
-                <img src="{% static 'media/icons/Close.png' %}" title="Cerrar">
+                <img src="{% static './media/icons/Close.png' %}" title="Cerrar">
               </a>
             </div>
             <div class="widget_head" style="background-color: #000000;  height: 50px;">
-              <img src="{% static 'media/icons/tada encabezado.jpeg' %}">
+              <img src="{% static './media/icons/tada encabezado.jpeg' %}">
             </div>
             <div class="widget_body" style="margin: 20px;">
               <div class="widget_body--content">
                 <div class="body_content--text center" style="margin-bottom: 1rem;">
-                  <p class="body--text" data-font="{% static 'media/fonts/Montserrat-Black.ttf' %}"
+                  <p class="body--text" data-font="{% static './media/fonts/Montserrat-Black.ttf' %}"
                     style="color: #ffffff; font-size: 18px; text-transform: none">Compra tus cervezas frías, rápido y a
                     precios mágicos</p>
                 </div>
                 <div>
-                  <img class="QR" src="{% static 'media/icons/QR_Compras.png' %}"
+                  <img class="QR" src="{% static './media/icons/QR_Compras.png' %}"
                     style="background:transparent; padding: 5px 20px 5px 5px;" width="200" height="200" ;>
                 </div>
                 <div class="body_content--btn" style="margin-bottom: 0rem;">
                   <a href="{% url 'market.html' %}" target="_blank" class="body_btn--a"
                     data-value="&quot;event&quot;: &quot;GAEvent&quot;,&quot;event_category&quot;: &quot;Content&quot;,&quot;event_action&quot;: &quot;button&quot;,&quot;event_label&quot;: &quot;widget_tada&quot;,&quot;interaction&quot;:&quot;true&quot;,&quot;component_name&quot;: &quot;btn_comprar_widget_tada&quot;,&quot;element_text&quot;: &quot;comprar&quot;,&quot;campaign_description&quot;: &quot;Widget_collection_Cerveza_Modelo&#039;&quot;"
-                    data-font="{% static 'media/fonts/Montserrat-ExtraBold.ttf' %}" data-hover="#bdbcbc" data-color="#000000"
+                    data-font="{% static './media/fonts/Montserrat-ExtraBold.ttf' %}" data-hover="#bdbcbc" data-color="#000000"
                     style="width: 100px; height: 35px; background: #ffcc00; color: #000000; font-size: 16px; border-radius: 14px;text-transform: uppercase;">¡COMPRAR!</a>
                 </div>
               </div>
             </div>
             <div class="widget_footer" style="background:transparent;height: auto;">
-              <img src="{% static 'media/images/Vive-responsable.png' %}">
+              <img src="{% static './media/images/Vive-responsable.png' %}">
             </div>
           </div>
         </div>
@@ -152,9 +145,9 @@
     </footer>
   </div>
   <!-- Scripts para los datos -->
-  <script src="../assets/js/index.js" type="module"></script>
-  <script src="../assets/js/market.js"></script>
-  <script src="../assets/js/popup.js"></script>
+  <script src="{% static './js/index.js' %}" type="module"></script>
+  <script src="{% static './js/market.js' %}"></script>
+  <script src="{% static './js/popup.js' %}"></script>
 </body>
 
 </html>

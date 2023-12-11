@@ -8,7 +8,6 @@
 }
 
 body {
-    /* background-image: url('https://www.todofondos.net/wp-content/uploads/1920x1080-Anime-Cat-Wallpaper-768x432.jpg'); */
     background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9a37bf7d-646b-48e4-b09b-6d36d37437b7/d3jl6jh-06a810d1-b43f-410d-93e6-4102c21c44b0.jpg/v1/fill/w_900,h_600,q_75,strp/dark_blue_background_01_by_limited_vision_stock_d3jl6jh-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjAwIiwicGF0aCI6IlwvZlwvOWEzN2JmN2QtNjQ2Yi00OGU0LWIwOWItNmQzNmQzNzQzN2I3XC9kM2psNmpoLTA2YTgxMGQxLWI0M2YtNDEwZC05M2U2LTQxMDJjMjFjNDRiMC5qcGciLCJ3aWR0aCI6Ijw9OTAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.TtEGXxWzIwOxlQgY_p92QIreiexxbMLsXYVIXQNWsQ8");
     background-position: center;
     background-repeat: no-repeat;
@@ -161,7 +160,7 @@ input {
     font-weight: 900;
 }
 
-.main-color-vinos {
+.main-color-cerveza {
     color: whitesmoke;
     display: flex;
     flex-direction: column;
@@ -169,21 +168,21 @@ input {
     align-items: center;
 }
 
-.main-color-vinos p,
-.main-color-vinos a {
+.main-color-cerveza p,
+.main-color-cerveza a {
     font-size: 1.5rem;
     font-weight: 700;
 }
 
-.main-color-vinos a:active,
-.main-color-vinos a:visited,
-.main-color-vinos a:link,
-.main-color-vinos a:focus {
+.main-color-cerveza a:active,
+.main-color-cerveza a:visited,
+.main-color-cerveza a:link,
+.main-color-cerveza a:focus {
     text-decoration: none;
     color: white;
 }
 
-.main-color-vinos > .list {
+.main-color-cerveza > .list {
     display: flex;
     flex-direction: row;
     width: 30rem;
