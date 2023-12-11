@@ -67,7 +67,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "products_api.wsgi.application"
+WSGI_APPLICATION = "api-cerveza.wsgi.application"
 
 
 # Database
@@ -83,16 +83,16 @@ WSGI_APPLICATION = "products_api.wsgi.application"
 USUARIO_PYTHON_ANYWHERE     = "grupo24"
 PASSWORD_MYSQL              = "P@ssw0rd$ecur@G00gl3"
 MYSQL_PYTHON_ANYWHERE_HOST  = USUARIO_PYTHON_ANYWHERE+".mysql.pythonanywhere-services.com"
-MYSQL_DATABASE              = USUARIO_PYTHON_ANYWHERE+"$Cerveza"
+MYSQL_DATABASE              = USUARIO_PYTHON_ANYWHERE+"_Cerveceria"
 
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': MYSQL_DATABASE ,
-        'USER': grupo24,
-        'PASSWORD': P@ssw0rd$ecur@G00gl3,
-        'HOST': grupo24.mysql.pythonanywhere-services.com,
+        'USER': USUARIO_PYTHON_ANYWHERE ,
+        'PASSWORD': PASSWORD_MYSQL ,
+        'HOST': MYSQL_PYTHON_ANYWHERE_HOST ,
         'PORT': '3306',
         'OPTIONS': {'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"},
         }
