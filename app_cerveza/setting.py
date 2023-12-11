@@ -8,24 +8,25 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-+$j7v#z&s@*v##%#s=5s&jab(nn2q$emjklxlv)neb^pzo#onr'
+SECRET_KEY = 'django-insecure-w^u&%_smokoc-%%2ik_^f(n^si8xc_=%z_-wus6=#4tcm5^kt5'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["grupo24.pythonanywhere.com"]
 
 
-# APPS = [
-#     "app_cerveza"
-# ]
+APPS = [
+     "app_cerveza"
+ ]
 
-# EXTERNALS = [
-#     "rest_framework",
-# ]
+EXTERNALS = [
+     "rest_framework",
+ ]
 
 INSTALLED_APPS = [
     'app_cerveza',
+    'api-cerveza',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -35,10 +36,8 @@ INSTALLED_APPS = [
     'rest_framework',
 ]
 
-
-# INSTALLED_APPS += APPS
-# INSTALLED_APPS += EXTERNALS
-
+INSTALLED_APPS += APPS
+INSTALLED_APPS += EXTERNALS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -75,31 +74,30 @@ WSGI_APPLICATION = 'app_cerveza.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': BASE_DIR / 'db.sqlite3',
+#    }
+#}
+
+USUARIO_PYTHON_ANYWHERE     = "grupo24"
+PASSWORD_MYSQL              = "P@ssw0rd$ecur@G00gl3"
+MYSQL_PYTHON_ANYWHERE_HOST  = USUARIO_PYTHON_ANYWHERE+".mysql.pythonanywhere-services.com"
+MYSQL_DATABASE              = USUARIO_PYTHON_ANYWHERE+"$Cerveza"
+
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': MYSQL_DATABASE ,
+        'USER': grupo24,
+        'PASSWORD': P@ssw0rd$ecur@G00gl3,
+        'HOST': grupo24.mysql.pythonanywhere-services.com,
+        'PORT': '3306',
+        'OPTIONS': {'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"},
+        }
     }
-}
-
-# USUARIO_PYTHON_ANYWHERE     = "grupo24"
-# PASSWORD_MYSQL              = ""
-# MYSQL_PYTHON_ANYWHERE_HOST  = USUARIO_PYTHON_ANYWHERE+".mysql.pythonanywhere-services.com"
-# MYSQL_DATABASE              = USUARIO_PYTHON_ANYWHERE+"$Cerveza"
-
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': MYSQL_DATABASE ,
-#         'USER': USUARIO_PYTHON_ANYWHERE,
-#         'PASSWORD': PASSWORD_MYSQL,
-#         'HOST': MYSQL_PYTHON_ANYWHERE_HOST,
-#         'PORT': '3306',
-#         'OPTIONS': {'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"},
-#     }
-# }
-
 
 
 # Password validation
@@ -124,11 +122,13 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'es-AR'
+LANGUAGE_CODE = 'es-ar'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Argentina/Buenos_Aires'
 
 USE_I18N = True
+
+USE_L10N = True
 
 USE_TZ = True
 
