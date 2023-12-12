@@ -2,6 +2,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'products_api.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'api-cerveza.settings')
 
 application = get_wsgi_application()
