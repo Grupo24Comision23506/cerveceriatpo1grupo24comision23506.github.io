@@ -16,16 +16,15 @@ DEBUG = True
 ALLOWED_HOSTS = ["grupo24.pythonanywhere.com"]
 
 
-APPS = [
-     "app_cerveza"
- ]
+# APPS = [
+#      "app_cerveza"
+# ]
 
-EXTERNALS = [
-     "rest_framework",
- ]
+# EXTERNALS = [
+#      "rest_framework"
+# ]
 
 INSTALLED_APPS = [
-    'app_cerveza',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -33,10 +32,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'app_cerveza',
 ]
 
-INSTALLED_APPS += APPS
-INSTALLED_APPS += EXTERNALS
+# INSTALLED_APPS += EXTERNALS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -73,30 +72,46 @@ WSGI_APPLICATION = 'app_cerveza.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': BASE_DIR / 'db.sqlite3',
-#    }
-#}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 USUARIO_PYTHON_ANYWHERE     = "grupo24"
 PASSWORD_MYSQL              = "P@ssw0rd$ecur@G00gl3"
 MYSQL_PYTHON_ANYWHERE_HOST  = USUARIO_PYTHON_ANYWHERE+".mysql.pythonanywhere-services.com"
-MYSQL_DATABASE              = USUARIO_PYTHON_ANYWHERE+"$Cerveza"
+MYSQL_DATABASE              = USUARIO_PYTHON_ANYWHERE+"$default"
 
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': MYSQL_DATABASE ,
+#         'USER': USUARIO_PYTHON_ANYWHERE,
+#         'PASSWORD': PASSWORD_MYSQL ,
+#         'HOST': MYSQL_PYTHON_ANYWHERE_HOST ,
+#         'PORT': '3306',
+#         'OPTIONS': {'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"},
+#         }
+#     }
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': grupo24$default ,
-        'USER': grupo24,
-        'PASSWORD': P@ssw0rd$ecur@G00gl3,
-        'HOST': grupo24.mysql.pythonanywhere-services.com,
-        'PORT': '3306',
-        'OPTIONS': {'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"},
-        }
+        'NAME': MYSQL_DATABASE,  # Nombre de tu base de datos
+        'USER': USUARIO_PYTHON_ANYWHERE,          # Usuario de la base de datos
+        'PASSWORD': PASSWORD_MYSQL,  # Contraseña de la base de datos
+        'HOST': MYSQL_PYTHON_ANYWHERE_HOST,  # Dirección del host de la base de datos
+        'PORT': '3306',  # Puerto de la base de datos (generalmente es 3306 para MySQL)
+        'OPTIONS': {
+            'charset': 'utf8mb4',
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+        },
     }
+}
+
 
 
 # Password validation
@@ -135,13 +150,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
+    BASE_DIR / "static/",
 ]
 
-STATIC_ROOT = BASE_DIR / "static/"
+STATIC_ROOT = BASE_DIR / "staticfiles/"
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 

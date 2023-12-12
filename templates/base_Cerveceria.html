@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{% static './css/main.css' %}" />
-    {% block title %}<title>CRUD Cervezeria</title>{% endblock %}
+    {% block title %}<title>CRUD Cerveceria</title>{% endblock %}
 </head>
 
 <body>
@@ -19,7 +19,7 @@
                     <a v-bind:href="`#${item.toLowerCase()}`">-- item --</a>
                 </li>
                 <li>
-                    <a href="{% url 'cervezas:all' %}">Cervezas</a>
+                    <a href="{% url 'cervezas' %}">Cervezas</a>
                 </li>
             </ul>
         </header>

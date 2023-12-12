@@ -33,17 +33,17 @@
   {% block sidebar %}
   <header class="header">
     <div class="container logo-nav-container">
-      <a href="#bienvenido" title="Cervecería Cervisia" class="logo">
+      <a href="{% url 'Index' %}#bienvenido" title="Cervecería Cervisia" class="logo">
         <img src="{% static './media/icons/cerveceria-cervesia-dorado-unscreen.gif' %}" width="60px" height="60px" class="logo">
-      </a> 
+      </a>
       <nav class="navigation">
         <ul>
-          <li><a href="#bienvenido">Inicio</a></li>
-          <li><a href="#promo">Promociones</a></li>
-          <li><a href="{% url 'Formulario.html' %}">Contacto</a></li>
-          <li><a href="{% url 'market.html' %}">Market</a></li>
-          <li><a href="{% url 'Cartas.html' %}">Cartas</a></li>
-          <li><a href="{% url 'Historia.html' %}">Historia</a></li>
+          <li><a href="{% url 'Index' %}#bienvenido">Inicio</a></li>
+          <li><a href="{% url 'Index' %}#promo">Promociones</a></li>
+          <li><a href="{% url 'Formulario' %}">Contacto</a></li>
+          <li><a href="{% url 'market' %}">Market</a></li>
+          <li><a href="{% url 'Cartas' %}">Cartas</a></li>
+          <li><a href="{% url 'Historia' %}">Historia</a></li>
           <button id="menu-button" href="#bienvenido" style="background:transparent; height:auto;">
             <img src="{% static './media/images/hamburguesa.svg' %}" alt="Menú">
           </button>
@@ -82,7 +82,7 @@
               <p>Párrafo descriptivo de la Imagen 4.</p>
            </div>
     </div>
-    
+
     <div class="image-slider">
         <div class="slider-image">
             <img src="{% static './media/images/lupulo.jpg' %}" alt="1">
@@ -97,10 +97,10 @@
             <p>Maiz</p>
         </div>
     </div>
-    
+
     <!-- <div class="slider-controls">
              <button id="prevBtn">Anterior</button>
-             <button id="nextBtn">Siguiente</button> 
+             <button id="nextBtn">Siguiente</button>
          </div>-->
   </div>
         <!-- Agregado a Historia -->
@@ -150,7 +150,7 @@
     <video autoplay muted loop id="video" poster="{% static './media/images/fondo.png' %}">
       <source src="{% static './media/video/Vaso_Espuma.mp4' %}" type="video/mp4">
        Tu navegador no soporta videos HTML5.
-    </video>    
+    </video>
     <h1 class="subtitulo"> Y por todo eso refréscate con el delicioso sabor de <br>Nuestra Cerveza</h1>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet eum
