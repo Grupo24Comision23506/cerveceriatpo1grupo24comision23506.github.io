@@ -33,17 +33,18 @@
   {% block sidebar %}
   <header class="header">
     <div class="container logo-nav-container">
-      <a href="{% url 'Index' %}#bienvenido" title="Cervecería Cervisia" class="logo">
+      <a href="{% url 'index.html'%}#bienvenido" title="Cervecería Cervisia" class="logo">
         <img src="{% static './media/icons/cerveceria-cervesia-dorado-unscreen.gif' %}" width="60px" height="60px" class="logo">
       </a>
       <nav class="navigation">
         <ul>
-          <li><a href="{% url 'Index' %}#bienvenido">Inicio</a></li>
-          <li><a href="{% url 'Index' %}#promo">Promociones</a></li>
-          <li><a href="{% url 'Formulario' %}">Contacto</a></li>
-          <li><a href="{% url 'market' %}">Market</a></li>
-          <li><a href="{% url 'Cartas' %}">Cartas</a></li>
-          <li><a href="{% url 'Historia' %}">Historia</a></li>
+          <li><a href="{% url 'index.html'%}#bienvenido">Inicio</a></li>
+          <li><a href="{% url 'index.html'%}#promo">Promociones</a></li>
+          <li><a href="{% url 'Formulario.html' %}">Contacto</a></li>
+          <li><a href="{% url 'Market.html' %}">Market</a></li>
+          <li><a href="{% url 'base_cervezeria.html' %}">CRUD</a></li>
+          <li><a href="{% url 'Cartas.html' %}">Cartas</a></li>
+          <li><a href="{% url 'Historia.html' %}">Historia</a></li>
           <button id="menu-button" href="#bienvenido" style="background:transparent; height:auto;">
             <img src="{% static './media/images/hamburguesa.svg' %}" alt="Menú">
           </button>
@@ -52,6 +53,7 @@
     </div>
   </header>
   {% endblock %}
+  
     <div class="line"></div>
     <div class="video-background" style="height: 1800px;;width: 100vw">;
         <video autoplay muted loop id="video" poster="{% static './media/images/fondo.png' %}">

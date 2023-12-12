@@ -49,7 +49,7 @@ let sector = {
 
     data: function () {
         return {
-            url: "https://api.sampleapis.com/beer/reds",
+            url: "https://api.sampleapis.com/beers/ale",
             wines: [],
             error: false,
             nroerror: 0,
@@ -92,16 +92,7 @@ let sector = {
 let app = {
     data: function () {
         return {
-            lista: ["INICIO", "CONTACTO", "HABILIDADES"],
-            habilidades: [
-                "SQL",
-                "PYTHON",
-                "REACT",
-                "VUE",
-                "GITHUB-GIT",
-                "POWER BI",
-            ],
-            intro: "Mi nombre es Abcdefghi, soy abcdfghi , abcdefghi y abcdfghi",
+            lista: ["INICIO", "FORMULARIO", "MARKET"],
             value: null,
         };
     },

@@ -31,7 +31,7 @@ class CervezasBaseView(View):
     success_url = reverse_lazy('cervezas:all')
 
 class Cervezas(CervezasBaseView, DetailView):
-    template_name = "base_cerveceria.html"
+    template_name = "cervezas.html"
 
 
 class CervezasListView(CervezasBaseView,ListView):

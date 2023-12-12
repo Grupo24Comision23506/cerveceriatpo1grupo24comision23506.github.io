@@ -1,27 +1,53 @@
 {% load static %}
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-AR">
 
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
-    {% block title %}<title>CRUD</title>{% endblock %}
+    <link rel="stylesheet" href="{% static './css/main.css' %}" />
+    {% block title %}<title>CRUD Cerveceria</title>{% endblock %}
 </head>
 
 <body>
+  <!-- Header de la página -->
+  <!-- Menu horizontal paginas-->
+  {% block sidebar %}
+  <header class="header">
+    <div class="container logo-nav-container">
+      <a href="{% url 'index.html'%}#bienvenido" title="Cervecería Cervisia" class="logo">
+        <img src="{% static './media/icons/cerveceria-cervesia-dorado-unscreen.gif' %}" width="60px" height="60px" class="logo">
+      </a>
+      <nav class="navigation">
+        <ul>
+          <li><a href="{% url 'index.html'%}#bienvenido">Inicio</a></li>
+          <li><a href="{% url 'index.html'%}#promo">Promociones</a></li>
+          <li><a href="{% url 'Formulario.html' %}">Contacto</a></li>
+          <li><a href="{% url 'Market.html' %}">Market</a></li>
+          <li><a href="{% url 'base_cervezeria.html' %}">CRUD</a></li>
+          <li><a href="{% url 'Cartas.html' %}">Cartas</a></li>
+          <li><a href="{% url 'Historia.html' %}">Historia</a></li>
+          <button id="menu-button" href="#bienvenido" style="background:transparent; height:auto;">
+            <img src="{% static './media/images/hamburguesa.svg' %}" alt="Menú">
+          </button>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  {% endblock %}
     <div id="app">
-        <header id="header">
+        <div id="header">
             <ul>
                 <li v-for="item in lista" @click="clickedShow">
                     <a v-bind:href="`#${item.toLowerCase()}`">-- item --</a>
                 </li>
                 <li>
-                    <a href="{% url 'home' %}">Cervezas</a>
+                    <a href="{% url 'cervezas' %}">Cervezas</a>
                 </li>
             </ul>
-        </header>
+        </div>
 
         {% block content %}
         {% endblock %}
@@ -29,7 +55,6 @@
     </div>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://unpkg.com/vue@next"></script>
-    <script src="{% static 'js/vueScript.js' %}"></script>
 </body>
 
 </html>
