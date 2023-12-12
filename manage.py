@@ -1,6 +1,5 @@
 import os
 import sys
-# Probando el pull --force  no creo que este subiendo al repo remoto
 
 def main():
     """Run administrative tasks."""
