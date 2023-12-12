@@ -1,0 +1,131 @@
+.widget {
+  background-color: white;
+  position: fixed;
+  max-width: 100%;
+  display: none;
+}
+@media (max-width: 640px) {
+  .widget.mobile {
+    display: block;
+  }
+}
+@media (min-width: 641px) and (max-width: 960px) {
+  .widget.tablet {
+    display: block;
+  }
+}
+@media (min-width:961px) {
+  .widget.desktop {
+    display: block;
+  }
+}
+.widget.left_top {
+  left: 2%;
+  top: 3%;
+}
+.widget.left_bottom {
+  left: 2%;
+  bottom: 3%;
+}
+.widget.right_top {
+  right: 2%;
+  top: 3%;
+}
+.widget.right_bottom {
+  right: 2%;
+  bottom: 3%;
+}
+.widget.widget_cookie {
+  display: none;
+}
+.widget .widget_background {
+  display: block;
+  position: absolute;
+  inset: 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: 1;
+  overflow: hidden;
+}
+.widget .widget_close {
+  margin-top: 10px;
+  margin-right: 5px;
+  position: absolute;
+  right: 0;
+}
+.widget .widget_close .widget_close--btn {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+.widget .widget_head {
+  width: 100%;
+  height: 50px;
+}
+.widget .widget_head img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.widget .widget_head .widget_head--title {
+  display: none;
+}
+.widget .widget_head .widget_head--title.visible {
+  display: block;
+  text-align: center;
+  padding-top: 5px;
+  padding: 8%;
+  margin: auto;
+}
+.QR {
+  background:transparent;
+   }
+   
+.widget .widget_body .widget_body--content .body_content--text.center {
+  text-align: center;
+}
+.widget .widget_body .widget_body--content .body_content--text.justify {
+  text-align: justify;
+}
+.widget .widget_body .widget_body--content .body_content--text.left {
+  text-align: left;
+}
+.widget .widget_body .widget_body--content .body_content--text.right {
+  text-align: right;
+}
+.widget .widget_body .widget_body--content .body_content--btn a {
+  cursor: pointer;
+  display: flex;
+  padding: 8px 19px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.widget .widget_body .widget_body--content .body_content--btn a:hover {
+  filter: drop-shadow(2px 4px 6px black);
+}
+.widget .widget_footer {
+  text-align: center;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0;
+}
+.widget .widget_footer .widget_footer--title {
+  display: none;
+}
+.widget .widget_footer .widget_footer--title.visible {
+  display: block;
+}

@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+
+:root {
+  --first-color: #560e86;
+  --second-color: #ac51ec;
+  --third-color: #a52a2a;
+  --ColorLetra: #fff;
+  --Width-Ancho: 100vw;
+  --Height-Alto: 100vh;
+  --Size-Letra: 10rem;
+  --height-Max-Alto: 50vmax;
+  --Width-Max-Ancho: 50vmax;
+  --Height-Tercio: 33.33%;
+  --Width-Tercio: 33.33%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.body{
+  display: flex;
+}
+
+.fondo-oferta{
+  border-color: var(--third-color);
+  background-color: -webkit-radial-gradient(var(--first-color),var(--second-color));
+  width: calc(var(--Width-Ancho) * calc(var((--Width-Tercio) * 2)));
+  height: calc(var(--Height-Alto) * calc(var((--Height-Tercio) * 2)));
+  border-style: ridge;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.popup-oferta {
+  position: fixed;
+  top: 0;
+  left: 0;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.popup-content-oferta {
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+.close-btn-oferta {
+  position: absolute;
+  left: 45%;
+  text-align: left;
+  font-size:calc(var(--Height-Alto)-50%);
+  cursor: pointer;
+  z-index: 99;
+}
+
+/*  Cartel Neon Oferta PopUp */
+.neon span {
+  position: relative;
+  text-align: center;
+  font-size: 7rem;
+  font-weight: bold;
+  font-family: "Fredoka One", Times, serif serif;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+  background: transparent;
+  padding-top: .25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-bottom: 2rem;
+  z-index: 99;
+}
+.neon span::before {
+  content: var(--l);
+  position: absolute;
+  text-align: center;
+  transform: scale(1.1);
+  filter: blur(.75rem);
+  z-index: 99;
+}
+.neon span::after {
+  content: var(--l);
+  position: absolute;
+  text-align: center;
+  top: 80%;
+  left: 0;
+  filter: blur(.20rem);
+  transform: rotateX(50deg);
+  z-index: 99;
+}
+.neon span:hover {
+  filter: contrast(250%);
+}
+.neon span:nth-child(1) {
+  color: #00bef8;
+}
+.neon span:nth-child(2) {
+  color: #ff0697;
+}
+.neon span:nth-child(3) {
+  color: #ff4d00;
+}
+.neon span:nth-child(4) {
+  color: #ffe600;
+}
+.neon span:nth-child(5) {
+  color: #bb00ff;
+}
+
+.text-cartel-oferta {
+  position: relative;
+  text-align: center;
+  font-size: 2rem; /* Ajusta el tamaño del párrafo según tus necesidades */
+  color: #ffffff; /* Cambia el color de texto según tus necesidades */
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  font-family: "Fredoka One", Times, serif serif;
+  z-index: 99;
+}

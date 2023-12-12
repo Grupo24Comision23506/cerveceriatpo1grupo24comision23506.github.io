@@ -1,0 +1,31 @@
+
+section{
+    background-image: linear-gradient(to bottom, #715674, #130b41dc ), url("../media/images/MODELO-bk_registro.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1{
+    padding-top: 2rem;
+    padding-bottom: 0.1rem;
+}
+button {
+    margin: 5px;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+  }
+
+.carta{
+    display: flex;
+}
+.comidas{
+    border: 1px solid #000;
+    padding: 10px;
+    text-align: center;
+}
+.tragos{
+    border: 1px solid #000;
+    padding: 10px;
+    text-align: center;
+}

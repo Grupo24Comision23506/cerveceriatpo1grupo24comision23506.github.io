@@ -1,0 +1,125 @@
+button {
+  margin: 5px;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.contenedor {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filtro {
+  width: 25%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.filtro form {
+  position: fixed;
+  top: 7rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.filtro label {
+  margin-bottom: 5px;
+}
+
+.filtro input,
+.filtro select {
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.filtro button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.productos {
+  padding: 10px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
+.tarjeta-producto {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.tarjeta-producto img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.tarjeta-producto h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.tarjeta-producto p {
+  margin: 0;
+  font-size: 16px;
+  color: #888;
+}
+
+.paginacion {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin: auto
+}
+
+.paginacion button {
+  padding: 20px;
+  margin: 5px 5px;
+  background: #b48701;
+  color: white;
+  cursor: pointer;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s;
+}
+
+#popup {
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+#confirmar {
+  padding: 10px 20px;
+  background-color: #cf7a35;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+#confirmar:hover {
+  background-color: #eb7e25;
+}
