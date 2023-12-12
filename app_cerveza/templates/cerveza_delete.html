@@ -1,4 +1,4 @@
-{% extends 'base_Cervezeria.html' %}
+{% extends 'base_cervezeria.html' %}
 {% block content %}
 
 <main>
@@ -11,7 +11,7 @@
             <input type="submit" value="{{ tipo }}" />
         </form>
 
-        <a href="{% url 'cerveza:all' %}">Cancelar</a>
+        <a href="{% url 'home' %}">Cancelar</a>
     </div>
 </main>
 {% endblock %}

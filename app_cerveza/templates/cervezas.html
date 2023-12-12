@@ -1,10 +1,10 @@
-{% extends 'base_cerveceria.html' %}
+{% extends 'base_cervezeria.html' %}
 {% block content %}
 
 <main>
     <div class="main-color-cerveza">
         <h1>Todas las Cervezas</h1>
-        <h2><a href="{% url 'cerveza:create' %}">CREAR CERVEZA</a></h2>
+        <h2><a href="{% url 'create' %}">CREAR CERVEZA</a></h2>
         {% for cerveza in cerveza_list%}
         <div class="list">
             <span>
@@ -15,15 +15,15 @@
             </span>
             <span>
                 <label for="">Detalle: </label>
-                <a href="{% url 'cerveza:detail' cerveza.id %}">+</a>
+                <a href="{% url 'detail' cerveza.id %}">+</a>
             </span>
             <span>
                 <label for="">Editar: </label>
-                <a href="{% url 'cerveza:update' cerveza.id %}">+</a>
+                <a href="{% url 'update' cerveza.id %}">+</a>
             </span>
             <span>
                 <label for="">Borrar: </label>
-                <a href="{% url 'cerveza:delete' cerveza.id %}">+</a>
+                <a href="{% url 'delete' cerveza.id %}">+</a>
             </span>
         </div>
 

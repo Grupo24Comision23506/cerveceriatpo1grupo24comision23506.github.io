@@ -33,17 +33,17 @@
   {% block sidebar %}
   <header class="header">
     <div class="container logo-nav-container">
-      <a href="#bienvenido" title="Cervecería Cervisia" class="logo">
+      <a href="{% url 'Index' %}#bienvenido" title="Cervecería Cervisia" class="logo">
         <img src="{% static './media/icons/cerveceria-cervesia-dorado-unscreen.gif' %}" width="60px" height="60px" class="logo">
-      </a> 
+      </a>
       <nav class="navigation">
         <ul>
-          <li><a href="#bienvenido">Inicio</a></li>
-          <li><a href="#promo">Promociones</a></li>
-          <li><a href="{% url 'Formulario.html' %}">Contacto</a></li>
-          <li><a href="{% url 'market.html' %}">Market</a></li>
-          <li><a href="{% url 'Cartas.html' %}">Cartas</a></li>
-          <li><a href="{% url 'Historia.html' %}">Historia</a></li>
+          <li><a href="{% url 'Index' %}#bienvenido">Inicio</a></li>
+          <li><a href="{% url 'Index' %}#promo">Promociones</a></li>
+          <li><a href="{% url 'Formulario' %}">Contacto</a></li>
+          <li><a href="{% url 'market' %}">Market</a></li>
+          <li><a href="{% url 'Cartas' %}">Cartas</a></li>
+          <li><a href="{% url 'Historia' %}">Historia</a></li>
           <button id="menu-button" href="#bienvenido" style="background:transparent; height:auto;">
             <img src="{% static './media/images/hamburguesa.svg' %}" alt="Menú">
           </button>
@@ -58,7 +58,7 @@
             <source src="{% static './media/video/Brindis_Market2.mp4' %}" type="video/mp4">
             Tu navegador no soporta videos HTML5.
         </video>
-        
+
         <!-- MAIN -->
         <main  style="padding-top: 10vh; padding-bottom: 10vh;">;
             <!-- CONTENEDOR FORMULARIO CREAR UNA CUENTA -->
@@ -120,13 +120,13 @@
                     </div>
                     <!-- GRUPO DE CONTRASEÑA 2 -->
                      <div class="formulario__grupo" id="grupo__password2">
-                        <label class="formulario__label">Repetir la contraseña</label> 
-                         <div class="formulario__grupo-input"> 
-                             <input type="password" class="formulario__input" name="password2" id="password2"> 
-                             <i class="formulario__validacion-estado fas fa-times-circle"></i> 
-                         </div> 
-                        <p class="formulario__input-error">La contraseña no coincide</p> 
-                     </div> 
+                        <label class="formulario__label">Repetir la contraseña</label>
+                         <div class="formulario__grupo-input">
+                             <input type="password" class="formulario__input" name="password2" id="password2">
+                             <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                         </div>
+                        <p class="formulario__input-error">La contraseña no coincide</p>
+                     </div>
                     <!-- GRUPO DE EMAIL -->
                     <div class="formulario__grupo" id="grupo__correo">
                         <label class="formulario__label">Correo Electonico</label>
@@ -139,9 +139,9 @@
                             números, letras.</p>
                     </div>
                     <!-- GRUPO DE TELÉFONO -->
-                     <div class="formulario__grupo" id="grupo__telefono"> 
+                     <div class="formulario__grupo" id="grupo__telefono">
                          <label class="formulario__label">Teléfono</label>
-                         <div class="formulario__grupo-input"> 
+                         <div class="formulario__grupo-input">
                              <input type="telefono" class="formulario__input" name="telefono" id="telefono"
                                  placeholder="1154545454">
                              <i class="formulario__validacion-estado fas fa-times-circle"></i>
@@ -254,7 +254,7 @@
                                         height="200" ;>
                                 </div>
                                 <div class="body_content--btn" style="margin-bottom: 0rem;">
-                                    <a href="{% url 'market.html' %}" target="_blank" class="body_btn--a"
+                                    <a href="{% url 'market' %}" target="_blank" class="body_btn--a"
                                         data-value="&quot;event&quot;: &quot;GAEvent&quot;,&quot;event_category&quot;: &quot;Content&quot;,&quot;event_action&quot;: &quot;button&quot;,&quot;event_label&quot;: &quot;widget_tada&quot;,&quot;interaction&quot;:&quot;true&quot;,&quot;component_name&quot;: &quot;btn_comprar_widget_tada&quot;,&quot;element_text&quot;: &quot;comprar&quot;,&quot;campaign_description&quot;: &quot;Widget_collection_Cerveza_Modelo&#039;&quot;"
                                         data-font="{% static './media/fonts/Montserrat-ExtraBold.ttf' %}" data-hover="#bdbcbc"
                                         data-color="#000000"
